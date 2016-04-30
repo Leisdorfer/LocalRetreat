@@ -21,8 +21,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Travel " translatesAutoresizingMaskIntoConstraints="NO" id="bAI-24-zXO">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="LocalRetreat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1V3-4A-710">
-                                <rect key="frame" x="20" y="28" width="256" height="49.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LocalRetreat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1V3-4A-710">
+                                <rect key="frame" x="20" y="72" width="256" height="49.5"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49.5" id="XPK-pH-Zef"/>
@@ -161,10 +161,204 @@
                         <viewControllerLayoutGuide type="top" id="fx4-3g-pTK"/>
                         <viewControllerLayoutGuide type="bottom" id="7rc-hh-6vq"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ScW-XD-g1j">
+                    <view key="view" alpha="0.69999999999999996" contentMode="scaleToFill" id="ScW-XD-g1j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYO-tz-hVM">
+                                <rect key="frame" x="45" y="224" width="132" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="QCh-3z-VNd"/>
+                                    <constraint firstAttribute="width" constant="132" id="yfd-cG-9zA"/>
+                                </constraints>
+                                <state key="normal" title="New York" image="New York">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmu-Ve-zee">
+                                <rect key="frame" x="45" y="231" width="132" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="7fu-kz-QA1"/>
+                                    <constraint firstAttribute="height" constant="21" id="KRz-Gu-4hB"/>
+                                    <constraint firstAttribute="width" constant="92" id="Vje-wb-Q5m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7fu-kz-QA1"/>
+                                        <exclude reference="Vje-wb-Q5m"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5d-qM-Opp">
+                                <rect key="frame" x="45" y="381" width="132" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="2ek-U5-OVC"/>
+                                    <constraint firstAttribute="height" constant="134" id="C4g-Th-fGt"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="San Francisco"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyP-yt-6yk">
+                                <rect key="frame" x="237" y="222" width="132" height="132"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="ZDr-jK-aRY"/>
+                                    <constraint firstAttribute="height" constant="131.5" id="woB-jN-hCd"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Seattle"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seattle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otp-cy-B9Z">
+                                <rect key="frame" x="237" y="231" width="132" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="hLn-3A-tUc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpN-ag-Hee">
+                                <rect key="frame" x="237" y="381" width="132" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="2Fp-6M-ZCv"/>
+                                    <constraint firstAttribute="height" constant="133" id="pfw-G8-fjt"/>
+                                </constraints>
+                                <state key="normal" image="Boston"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boston" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nW3-P1-4jL">
+                                <rect key="frame" x="237" y="386" width="132" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="6YW-tz-qMv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your destination" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDJ-A1-XrE">
+                                <rect key="frame" x="62" y="137" width="290" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="sPn-LD-CKD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YI-RF-Rk7">
+                                <rect key="frame" x="237" y="542" width="132" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="lYV-5i-xSr"/>
+                                    <constraint firstAttribute="width" constant="132" id="pde-cV-MxH"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Chicago"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czy-vE-fLB">
+                                <rect key="frame" x="45" y="542" width="132" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="gSZ-xJ-aud"/>
+                                    <constraint firstAttribute="width" constant="132" id="saC-Hu-BHQ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Austin"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Fran" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu0-IE-wIG">
+                                <rect key="frame" x="45" y="386" width="132" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="HuQ-Zu-lst"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Austin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBp-YE-LL2">
+                                <rect key="frame" x="45" y="547" width="132" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="hS4-uA-Kuw"/>
+                                    <constraint firstAttribute="width" constant="132" id="nxD-Fu-4nl"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="sWd-Qm-tOW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="nxD-Fu-4nl"/>
+                                        <exclude reference="sWd-Qm-tOW"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chicago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuK-Fz-ISW">
+                                <rect key="frame" x="237" y="547" width="132" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="Juh-7O-ZBk"/>
+                                    <constraint firstAttribute="width" constant="132" id="ogC-xs-lW5"/>
+                                    <constraint firstAttribute="height" constant="22" id="qEn-VE-Wz9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ogC-xs-lW5"/>
+                                        <exclude reference="Juh-7O-ZBk"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Otp-cy-B9Z" firstAttribute="leading" secondItem="Zmu-Ve-zee" secondAttribute="trailing" constant="60" id="1RU-cu-2Hd"/>
+                            <constraint firstItem="5YI-RF-Rk7" firstAttribute="top" secondItem="nW3-P1-4jL" secondAttribute="bottom" constant="134" id="4HR-tX-MjR"/>
+                            <constraint firstItem="7rc-hh-6vq" firstAttribute="top" secondItem="czy-vE-fLB" secondAttribute="bottom" constant="60" id="4rm-3m-oMp"/>
+                            <constraint firstItem="vBp-YE-LL2" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="25" id="CpH-ea-U3b"/>
+                            <constraint firstItem="VYO-tz-hVM" firstAttribute="top" secondItem="TDJ-A1-XrE" secondAttribute="bottom" constant="58" id="EUJ-eE-B3K"/>
+                            <constraint firstItem="nW3-P1-4jL" firstAttribute="top" secondItem="nyP-yt-6yk" secondAttribute="bottom" constant="32.5" id="Ehq-rc-HkL"/>
+                            <constraint firstItem="7rc-hh-6vq" firstAttribute="top" secondItem="vBp-YE-LL2" secondAttribute="bottom" constant="167" id="FGC-ud-Z3n"/>
+                            <constraint firstItem="VYO-tz-hVM" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="25" id="GA1-dH-Jx9"/>
+                            <constraint firstItem="5YI-RF-Rk7" firstAttribute="top" secondItem="vpN-ag-Hee" secondAttribute="bottom" constant="28" id="I1G-gS-25m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MuK-Fz-ISW" secondAttribute="trailing" constant="25" id="IBp-EW-DKC"/>
+                            <constraint firstItem="TDJ-A1-XrE" firstAttribute="top" secondItem="fx4-3g-pTK" secondAttribute="bottom" constant="73" id="Iue-A4-p8v"/>
+                            <constraint firstItem="nyP-yt-6yk" firstAttribute="top" secondItem="TDJ-A1-XrE" secondAttribute="bottom" constant="58" id="Iyn-Ec-AjM"/>
+                            <constraint firstItem="T5d-qM-Opp" firstAttribute="top" secondItem="Zmu-Ve-zee" secondAttribute="bottom" constant="129" id="JQr-28-eEl"/>
+                            <constraint firstItem="MuK-Fz-ISW" firstAttribute="leading" secondItem="vBp-YE-LL2" secondAttribute="trailing" constant="60" id="KFp-EA-Gx8"/>
+                            <constraint firstItem="Zmu-Ve-zee" firstAttribute="top" secondItem="TDJ-A1-XrE" secondAttribute="bottom" constant="65" id="KzM-nj-a1B"/>
+                            <constraint firstItem="TDJ-A1-XrE" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="42" id="LNh-23-1Dm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nW3-P1-4jL" secondAttribute="trailing" constant="25" id="Lza-dH-Pfe"/>
+                            <constraint firstItem="zu0-IE-wIG" firstAttribute="top" secondItem="VYO-tz-hVM" secondAttribute="bottom" constant="32" id="MeD-wd-uuo"/>
+                            <constraint firstItem="T5d-qM-Opp" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="25" id="Mwn-SA-2pW"/>
+                            <constraint firstItem="nyP-yt-6yk" firstAttribute="leading" secondItem="VYO-tz-hVM" secondAttribute="trailing" constant="42" id="OlC-At-Vjr"/>
+                            <constraint firstItem="MuK-Fz-ISW" firstAttribute="top" secondItem="vpN-ag-Hee" secondAttribute="bottom" constant="33" id="RFk-f9-qql"/>
+                            <constraint firstItem="vpN-ag-Hee" firstAttribute="leading" secondItem="zu0-IE-wIG" secondAttribute="trailing" constant="60" id="RZN-5d-vcW"/>
+                            <constraint firstItem="5YI-RF-Rk7" firstAttribute="leading" secondItem="vBp-YE-LL2" secondAttribute="trailing" constant="60" id="Rvb-PQ-FCn"/>
+                            <constraint firstItem="vpN-ag-Hee" firstAttribute="top" secondItem="Otp-cy-B9Z" secondAttribute="bottom" constant="129" id="TE2-Bd-F8Z"/>
+                            <constraint firstItem="nyP-yt-6yk" firstAttribute="leading" secondItem="VYO-tz-hVM" secondAttribute="trailing" constant="42" id="Tlr-dw-c1s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Otp-cy-B9Z" secondAttribute="trailing" constant="25" id="VDK-dx-nU8"/>
+                            <constraint firstItem="czy-vE-fLB" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="25" id="WfP-sO-KQb"/>
+                            <constraint firstItem="Zmu-Ve-zee" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="25" id="a7p-du-LxB"/>
+                            <constraint firstItem="nW3-P1-4jL" firstAttribute="leading" secondItem="zu0-IE-wIG" secondAttribute="trailing" constant="60" id="b0B-bH-t7Z"/>
+                            <constraint firstItem="nyP-yt-6yk" firstAttribute="leading" secondItem="Zmu-Ve-zee" secondAttribute="trailing" constant="60" id="cX5-81-Wgp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nyP-yt-6yk" secondAttribute="trailing" constant="25" id="dRu-39-q8p"/>
+                            <constraint firstItem="T5d-qM-Opp" firstAttribute="top" secondItem="VYO-tz-hVM" secondAttribute="bottom" constant="27" id="dUQ-NW-6kb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TDJ-A1-XrE" secondAttribute="trailing" constant="42" id="ee6-VV-zzW"/>
+                            <constraint firstItem="vpN-ag-Hee" firstAttribute="top" secondItem="nyP-yt-6yk" secondAttribute="bottom" constant="27.5" id="jgW-0y-AEJ"/>
+                            <constraint firstItem="zu0-IE-wIG" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="25" id="pFA-SL-NtE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vpN-ag-Hee" secondAttribute="trailing" constant="25" id="qIY-wa-ZFa"/>
+                            <constraint firstItem="vBp-YE-LL2" firstAttribute="top" secondItem="T5d-qM-Opp" secondAttribute="bottom" constant="32" id="rSi-kU-VHf"/>
+                            <constraint firstItem="TDJ-A1-XrE" firstAttribute="centerY" secondItem="ScW-XD-g1j" secondAttribute="centerY" constant="-216.5" id="sXq-HI-kGG"/>
+                            <constraint firstItem="czy-vE-fLB" firstAttribute="top" secondItem="zu0-IE-wIG" secondAttribute="bottom" constant="134" id="t8S-mt-Eyc"/>
+                            <constraint firstItem="Otp-cy-B9Z" firstAttribute="top" secondItem="TDJ-A1-XrE" secondAttribute="bottom" constant="65" id="wmf-3c-nfu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5YI-RF-Rk7" secondAttribute="trailing" constant="25" id="ytO-E9-ldU"/>
+                            <constraint firstItem="nyP-yt-6yk" firstAttribute="top" secondItem="TDJ-A1-XrE" secondAttribute="bottom" constant="56" id="zJ5-cS-9Eo"/>
+                            <constraint firstItem="czy-vE-fLB" firstAttribute="top" secondItem="T5d-qM-Opp" secondAttribute="bottom" constant="27" id="zvr-WO-mtx"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Iue-A4-p8v"/>
+                                <exclude reference="Iyn-Ec-AjM"/>
+                                <exclude reference="OlC-At-Vjr"/>
+                                <exclude reference="Tlr-dw-c1s"/>
+                                <exclude reference="4rm-3m-oMp"/>
+                                <exclude reference="FGC-ud-Z3n"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
@@ -192,6 +386,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Austin" width="590" height="393"/>
+        <image name="Boston" width="1920" height="1200"/>
+        <image name="Chicago" width="2048" height="1361"/>
+        <image name="New York" width="1080" height="720"/>
+        <image name="San Francisco" width="1080" height="720"/>
+        <image name="Seattle" width="1280" height="665"/>
         <image name="Travel " width="512" height="736"/>
     </resources>
 </document>
