@@ -153,10 +153,10 @@
             </objects>
             <point key="canvasLocation" x="1161" y="475"/>
         </scene>
-        <!--View Controller-->
+        <!--Traveller View Controller-->
         <scene sceneID="P7A-Nn-77f">
             <objects>
-                <viewController id="WoY-Bn-7w2" sceneMemberID="viewController">
+                <viewController id="WoY-Bn-7w2" customClass="TravellerViewController" customModule="LocalRetreat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fx4-3g-pTK"/>
                         <viewControllerLayoutGuide type="bottom" id="7rc-hh-6vq"/>
@@ -174,6 +174,10 @@
                                 <state key="normal" title="New York" image="New York">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="newYorkDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="bE4-Ag-Iun"/>
+                                    <segue destination="Z5I-ho-RgT" kind="show" id="MPA-MV-1sG"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmu-Ve-zee">
                                 <rect key="frame" x="45" y="231" width="132" height="21"/>
@@ -199,6 +203,10 @@
                                     <constraint firstAttribute="height" constant="134" id="C4g-Th-fGt"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="San Francisco"/>
+                                <connections>
+                                    <action selector="sanFranDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="4XP-1B-fIs"/>
+                                    <segue destination="Z5I-ho-RgT" kind="show" id="gLc-Gq-aJ2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyP-yt-6yk">
                                 <rect key="frame" x="237" y="222" width="132" height="132"/>
@@ -207,6 +215,10 @@
                                     <constraint firstAttribute="height" constant="131.5" id="woB-jN-hCd"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="Seattle"/>
+                                <connections>
+                                    <action selector="seattleDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="5fe-hb-KXf"/>
+                                    <segue destination="Z5I-ho-RgT" kind="show" id="Gzw-nz-ngX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seattle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otp-cy-B9Z">
                                 <rect key="frame" x="237" y="231" width="132" height="21"/>
@@ -224,6 +236,10 @@
                                     <constraint firstAttribute="height" constant="133" id="pfw-G8-fjt"/>
                                 </constraints>
                                 <state key="normal" image="Boston"/>
+                                <connections>
+                                    <action selector="bostonDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="BTj-EJ-2W8"/>
+                                    <segue destination="Z5I-ho-RgT" kind="show" id="b7e-l5-ah9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boston" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nW3-P1-4jL">
                                 <rect key="frame" x="237" y="386" width="132" height="22"/>
@@ -250,6 +266,10 @@
                                     <constraint firstAttribute="width" constant="132" id="pde-cV-MxH"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="Chicago"/>
+                                <connections>
+                                    <action selector="chicagoDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="vhC-Ek-lxn"/>
+                                    <segue destination="Z5I-ho-RgT" kind="show" id="uhM-H4-beL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czy-vE-fLB">
                                 <rect key="frame" x="45" y="542" width="132" height="134"/>
@@ -258,6 +278,10 @@
                                     <constraint firstAttribute="width" constant="132" id="saC-Hu-BHQ"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="Austin"/>
+                                <connections>
+                                    <action selector="austinDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="9Dy-Jf-CyT"/>
+                                    <segue destination="Z5I-ho-RgT" kind="show" id="dsA-Az-6zQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Fran" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu0-IE-wIG">
                                 <rect key="frame" x="45" y="386" width="132" height="22"/>
@@ -366,6 +390,25 @@
             </objects>
             <point key="canvasLocation" x="1683" y="475"/>
         </scene>
+        <!--Traveller View Controller-->
+        <scene sceneID="BHR-CS-qYm">
+            <objects>
+                <viewController id="Z5I-ho-RgT" customClass="TravellerViewController" customModule="LocalRetreat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hiA-sA-2eN"/>
+                        <viewControllerLayoutGuide type="bottom" id="jM6-IR-FPA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zjr-b4-rLC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B8E-qg-ipk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2198" y="475"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="zDb-Gr-ng4">
             <objects>
@@ -394,4 +437,7 @@
         <image name="Seattle" width="1280" height="665"/>
         <image name="Travel " width="512" height="736"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="uhM-H4-beL"/>
+    </inferredMetricsTieBreakers>
 </document>
