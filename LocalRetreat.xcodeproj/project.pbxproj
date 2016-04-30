@@ -14,6 +14,8 @@
 		16C091F11CD302C600090B03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16C091EF1CD302C600090B03 /* LaunchScreen.storyboard */; };
 		16C091FB1CD4EFBC00090B03 /* TravellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C091FA1CD4EFBC00090B03 /* TravellerViewController.swift */; };
 		16C091FD1CD4FA5100090B03 /* Traveller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C091FC1CD4FA5100090B03 /* Traveller.swift */; };
+		16C092031CD5544F00090B03 /* Locals.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16C092021CD5544F00090B03 /* Locals.plist */; };
+		16C092051CD573DB00090B03 /* Locals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C092041CD573DB00090B03 /* Locals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		16C091F21CD302C600090B03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16C091FA1CD4EFBC00090B03 /* TravellerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TravellerViewController.swift; path = ../TravellerViewController.swift; sourceTree = "<group>"; };
 		16C091FC1CD4FA5100090B03 /* Traveller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Traveller.swift; sourceTree = "<group>"; };
+		16C092021CD5544F00090B03 /* Locals.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Locals.plist; sourceTree = "<group>"; };
+		16C092041CD573DB00090B03 /* Locals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				16C091ED1CD302C600090B03 /* Assets.xcassets */,
 				16C091EF1CD302C600090B03 /* LaunchScreen.storyboard */,
 				16C091F21CD302C600090B03 /* Info.plist */,
+				16C092021CD5544F00090B03 /* Locals.plist */,
+				16C092041CD573DB00090B03 /* Locals.swift */,
 			);
 			path = LocalRetreat;
 			sourceTree = "<group>";
@@ -129,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16C092031CD5544F00090B03 /* Locals.plist in Resources */,
 				16C091F11CD302C600090B03 /* LaunchScreen.storyboard in Resources */,
 				16C091EE1CD302C600090B03 /* Assets.xcassets in Resources */,
 				16C091EC1CD302C600090B03 /* Main.storyboard in Resources */,
@@ -142,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16C092051CD573DB00090B03 /* Locals.swift in Sources */,
 				16C091E91CD302C600090B03 /* ViewController.swift in Sources */,
 				16C091FB1CD4EFBC00090B03 /* TravellerViewController.swift in Sources */,
 				16C091E71CD302C600090B03 /* AppDelegate.swift in Sources */,

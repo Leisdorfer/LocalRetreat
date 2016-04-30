@@ -166,7 +166,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYO-tz-hVM">
-                                <rect key="frame" x="45" y="224" width="132" height="130"/>
+                                <rect key="frame" x="45" y="176" width="132" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="QCh-3z-VNd"/>
                                     <constraint firstAttribute="width" constant="132" id="yfd-cG-9zA"/>
@@ -176,11 +176,10 @@
                                 </state>
                                 <connections>
                                     <action selector="newYorkDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="bE4-Ag-Iun"/>
-                                    <segue destination="Z5I-ho-RgT" kind="show" id="MPA-MV-1sG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmu-Ve-zee">
-                                <rect key="frame" x="45" y="231" width="132" height="21"/>
+                                <rect key="frame" x="45" y="183" width="132" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="92" id="7fu-kz-QA1"/>
                                     <constraint firstAttribute="height" constant="21" id="KRz-Gu-4hB"/>
@@ -197,7 +196,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5d-qM-Opp">
-                                <rect key="frame" x="45" y="381" width="132" height="134"/>
+                                <rect key="frame" x="45" y="333" width="132" height="134"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="132" id="2ek-U5-OVC"/>
                                     <constraint firstAttribute="height" constant="134" id="C4g-Th-fGt"/>
@@ -205,11 +204,10 @@
                                 <state key="normal" title="Button" image="San Francisco"/>
                                 <connections>
                                     <action selector="sanFranDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="4XP-1B-fIs"/>
-                                    <segue destination="Z5I-ho-RgT" kind="show" id="gLc-Gq-aJ2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyP-yt-6yk">
-                                <rect key="frame" x="237" y="222" width="132" height="132"/>
+                                <rect key="frame" x="237" y="174" width="132" height="132"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="132" id="ZDr-jK-aRY"/>
                                     <constraint firstAttribute="height" constant="131.5" id="woB-jN-hCd"/>
@@ -217,11 +215,10 @@
                                 <state key="normal" title="Button" image="Seattle"/>
                                 <connections>
                                     <action selector="seattleDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="5fe-hb-KXf"/>
-                                    <segue destination="Z5I-ho-RgT" kind="show" id="Gzw-nz-ngX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seattle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otp-cy-B9Z">
-                                <rect key="frame" x="237" y="231" width="132" height="21"/>
+                                <rect key="frame" x="237" y="183" width="132" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="hLn-3A-tUc"/>
                                 </constraints>
@@ -230,7 +227,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpN-ag-Hee">
-                                <rect key="frame" x="237" y="381" width="132" height="133"/>
+                                <rect key="frame" x="237" y="333" width="132" height="133"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="132" id="2Fp-6M-ZCv"/>
                                     <constraint firstAttribute="height" constant="133" id="pfw-G8-fjt"/>
@@ -238,11 +235,10 @@
                                 <state key="normal" image="Boston"/>
                                 <connections>
                                     <action selector="bostonDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="BTj-EJ-2W8"/>
-                                    <segue destination="Z5I-ho-RgT" kind="show" id="b7e-l5-ah9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boston" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nW3-P1-4jL">
-                                <rect key="frame" x="237" y="386" width="132" height="22"/>
+                                <rect key="frame" x="237" y="338" width="132" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="6YW-tz-qMv"/>
                                 </constraints>
@@ -251,7 +247,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YI-RF-Rk7">
-                                <rect key="frame" x="237" y="542" width="132" height="134"/>
+                                <rect key="frame" x="237" y="494" width="132" height="134"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="134" id="lYV-5i-xSr"/>
                                     <constraint firstAttribute="width" constant="132" id="pde-cV-MxH"/>
@@ -259,11 +255,10 @@
                                 <state key="normal" title="Button" image="Chicago"/>
                                 <connections>
                                     <action selector="chicagoDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="vhC-Ek-lxn"/>
-                                    <segue destination="Z5I-ho-RgT" kind="show" id="uhM-H4-beL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czy-vE-fLB">
-                                <rect key="frame" x="45" y="542" width="132" height="134"/>
+                                <rect key="frame" x="45" y="494" width="132" height="134"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="134" id="gSZ-xJ-aud"/>
                                     <constraint firstAttribute="width" constant="132" id="saC-Hu-BHQ"/>
@@ -271,11 +266,10 @@
                                 <state key="normal" title="Button" image="Austin"/>
                                 <connections>
                                     <action selector="austinDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="9Dy-Jf-CyT"/>
-                                    <segue destination="Z5I-ho-RgT" kind="show" id="dsA-Az-6zQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Fran" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu0-IE-wIG">
-                                <rect key="frame" x="45" y="386" width="132" height="22"/>
+                                <rect key="frame" x="45" y="338" width="132" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="HuQ-Zu-lst"/>
                                 </constraints>
@@ -284,7 +278,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Austin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBp-YE-LL2">
-                                <rect key="frame" x="45" y="547" width="132" height="22"/>
+                                <rect key="frame" x="45" y="499" width="132" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="hS4-uA-Kuw"/>
                                     <constraint firstAttribute="width" constant="132" id="nxD-Fu-4nl"/>
@@ -301,7 +295,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chicago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuK-Fz-ISW">
-                                <rect key="frame" x="237" y="547" width="132" height="22"/>
+                                <rect key="frame" x="237" y="499" width="132" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="Juh-7O-ZBk"/>
                                     <constraint firstAttribute="width" constant="132" id="ogC-xs-lW5"/>
@@ -317,8 +311,16 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7S-Qa-ego">
+                                <rect key="frame" x="96" y="668" width="222" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <segue destination="Z5I-ho-RgT" kind="show" id="9eC-ep-gJY"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your destination" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDJ-A1-XrE">
-                                <rect key="frame" x="62" y="137" width="290" height="29"/>
+                                <rect key="frame" x="67" y="101" width="290" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="290" id="sPn-LD-CKD"/>
                                 </constraints>
@@ -333,7 +335,7 @@
                             <constraint firstItem="5YI-RF-Rk7" firstAttribute="top" secondItem="nW3-P1-4jL" secondAttribute="bottom" constant="134" id="4HR-tX-MjR"/>
                             <constraint firstItem="7rc-hh-6vq" firstAttribute="top" secondItem="czy-vE-fLB" secondAttribute="bottom" constant="60" id="4rm-3m-oMp"/>
                             <constraint firstItem="vBp-YE-LL2" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="25" id="CpH-ea-U3b"/>
-                            <constraint firstItem="VYO-tz-hVM" firstAttribute="top" secondItem="TDJ-A1-XrE" secondAttribute="bottom" constant="58" id="EUJ-eE-B3K"/>
+                            <constraint firstItem="VYO-tz-hVM" firstAttribute="top" secondItem="TDJ-A1-XrE" secondAttribute="bottom" constant="46" id="EUJ-eE-B3K"/>
                             <constraint firstItem="nW3-P1-4jL" firstAttribute="top" secondItem="nyP-yt-6yk" secondAttribute="bottom" constant="32.5" id="Ehq-rc-HkL"/>
                             <constraint firstItem="7rc-hh-6vq" firstAttribute="top" secondItem="vBp-YE-LL2" secondAttribute="bottom" constant="167" id="FGC-ud-Z3n"/>
                             <constraint firstItem="VYO-tz-hVM" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="25" id="GA1-dH-Jx9"/>
@@ -343,8 +345,8 @@
                             <constraint firstItem="nyP-yt-6yk" firstAttribute="top" secondItem="TDJ-A1-XrE" secondAttribute="bottom" constant="58" id="Iyn-Ec-AjM"/>
                             <constraint firstItem="T5d-qM-Opp" firstAttribute="top" secondItem="Zmu-Ve-zee" secondAttribute="bottom" constant="129" id="JQr-28-eEl"/>
                             <constraint firstItem="MuK-Fz-ISW" firstAttribute="leading" secondItem="vBp-YE-LL2" secondAttribute="trailing" constant="60" id="KFp-EA-Gx8"/>
-                            <constraint firstItem="Zmu-Ve-zee" firstAttribute="top" secondItem="TDJ-A1-XrE" secondAttribute="bottom" constant="65" id="KzM-nj-a1B"/>
-                            <constraint firstItem="TDJ-A1-XrE" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="42" id="LNh-23-1Dm"/>
+                            <constraint firstItem="Zmu-Ve-zee" firstAttribute="top" secondItem="TDJ-A1-XrE" secondAttribute="bottom" constant="53" id="KzM-nj-a1B"/>
+                            <constraint firstItem="TDJ-A1-XrE" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="47" id="LNh-23-1Dm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nW3-P1-4jL" secondAttribute="trailing" constant="25" id="Lza-dH-Pfe"/>
                             <constraint firstItem="zu0-IE-wIG" firstAttribute="top" secondItem="VYO-tz-hVM" secondAttribute="bottom" constant="32" id="MeD-wd-uuo"/>
                             <constraint firstItem="T5d-qM-Opp" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="25" id="Mwn-SA-2pW"/>
@@ -361,16 +363,16 @@
                             <constraint firstItem="nyP-yt-6yk" firstAttribute="leading" secondItem="Zmu-Ve-zee" secondAttribute="trailing" constant="60" id="cX5-81-Wgp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nyP-yt-6yk" secondAttribute="trailing" constant="25" id="dRu-39-q8p"/>
                             <constraint firstItem="T5d-qM-Opp" firstAttribute="top" secondItem="VYO-tz-hVM" secondAttribute="bottom" constant="27" id="dUQ-NW-6kb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TDJ-A1-XrE" secondAttribute="trailing" constant="42" id="ee6-VV-zzW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TDJ-A1-XrE" secondAttribute="trailing" constant="37" id="ee6-VV-zzW"/>
                             <constraint firstItem="vpN-ag-Hee" firstAttribute="top" secondItem="nyP-yt-6yk" secondAttribute="bottom" constant="27.5" id="jgW-0y-AEJ"/>
                             <constraint firstItem="zu0-IE-wIG" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="25" id="pFA-SL-NtE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vpN-ag-Hee" secondAttribute="trailing" constant="25" id="qIY-wa-ZFa"/>
                             <constraint firstItem="vBp-YE-LL2" firstAttribute="top" secondItem="T5d-qM-Opp" secondAttribute="bottom" constant="32" id="rSi-kU-VHf"/>
-                            <constraint firstItem="TDJ-A1-XrE" firstAttribute="centerY" secondItem="ScW-XD-g1j" secondAttribute="centerY" constant="-216.5" id="sXq-HI-kGG"/>
+                            <constraint firstItem="TDJ-A1-XrE" firstAttribute="centerY" secondItem="ScW-XD-g1j" secondAttribute="centerY" constant="-252.5" id="sXq-HI-kGG"/>
                             <constraint firstItem="czy-vE-fLB" firstAttribute="top" secondItem="zu0-IE-wIG" secondAttribute="bottom" constant="134" id="t8S-mt-Eyc"/>
-                            <constraint firstItem="Otp-cy-B9Z" firstAttribute="top" secondItem="TDJ-A1-XrE" secondAttribute="bottom" constant="65" id="wmf-3c-nfu"/>
+                            <constraint firstItem="Otp-cy-B9Z" firstAttribute="top" secondItem="TDJ-A1-XrE" secondAttribute="bottom" constant="53" id="wmf-3c-nfu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5YI-RF-Rk7" secondAttribute="trailing" constant="25" id="ytO-E9-ldU"/>
-                            <constraint firstItem="nyP-yt-6yk" firstAttribute="top" secondItem="TDJ-A1-XrE" secondAttribute="bottom" constant="56" id="zJ5-cS-9Eo"/>
+                            <constraint firstItem="nyP-yt-6yk" firstAttribute="top" secondItem="TDJ-A1-XrE" secondAttribute="bottom" constant="44" id="zJ5-cS-9Eo"/>
                             <constraint firstItem="czy-vE-fLB" firstAttribute="top" secondItem="T5d-qM-Opp" secondAttribute="bottom" constant="27" id="zvr-WO-mtx"/>
                         </constraints>
                         <variation key="default">
@@ -431,6 +433,7 @@
                                 <state key="normal" title="Button" image="Culture"/>
                                 <connections>
                                     <action selector="adventurerPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="SDl-t8-uNh"/>
+                                    <action selector="cultureExplorerPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="IUd-Hl-vBK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laM-72-Dua">
@@ -442,6 +445,7 @@
                                 <state key="normal" title="Button" image="Foodie"/>
                                 <connections>
                                     <action selector="adventurerPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="x6l-Lj-lwj"/>
+                                    <action selector="foodiePreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="fBr-KM-tBl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOU-di-azv">
@@ -455,6 +459,7 @@
                                 <state key="normal" title="Button" image="History"/>
                                 <connections>
                                     <action selector="adventurerPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="X0i-kl-naa"/>
+                                    <action selector="historyBuffPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="HuH-jg-ZSN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEy-kT-1zd">
@@ -466,12 +471,8 @@
                                 <state key="normal" title="Button" image="Night"/>
                                 <connections>
                                     <action selector="adventurerPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="2kT-jo-X9F"/>
+                                    <action selector="nightOwlPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="PF5-eP-aGA"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8g-ey-la7">
-                                <rect key="frame" x="96" y="596" width="222" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Submit"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ou-bz-cHM">
                                 <rect key="frame" x="37" y="441" width="95" height="83"/>
@@ -482,6 +483,7 @@
                                 <state key="normal" title="Button" image="Art"/>
                                 <connections>
                                     <action selector="adventurerPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="TWb-IZ-FDZ"/>
+                                    <action selector="artDesignLoverPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="vAp-10-ibf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the travel types (limit: 3) that best describe your passions and how you like to travel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36D-C9-gUN">
@@ -504,7 +506,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Adventure"/>
                                 <connections>
-                                    <action selector="adventurerPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="qbd-c1-Pa0"/>
+                                    <action selector="adventurerPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="NY1-NJ-xkW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Adventurer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atU-4V-Eo1">
@@ -543,15 +545,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Night Owl" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEJ-RN-juR">
-                                <rect key="frame" x="282" y="458" width="95" height="46.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="Cjr-en-XgO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Foodie" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zK-Kp-m4J">
                                 <rect key="frame" x="160" y="458" width="95" height="46.5"/>
                                 <constraints>
@@ -561,6 +554,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Night Owl" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEJ-RN-juR">
+                                <rect key="frame" x="282" y="458" width="95" height="46.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Cjr-en-XgO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8g-ey-la7">
+                                <rect key="frame" x="96" y="596" width="222" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -635,7 +642,4 @@
         <image name="Seattle" width="1280" height="665"/>
         <image name="Travel " width="512" height="736"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="uhM-H4-beL"/>
-    </inferredMetricsTieBreakers>
 </document>

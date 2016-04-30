@@ -10,17 +10,18 @@ import Foundation
 
 
 protocol TravellerType{
-    var destination: [Destination] {get}
-    var travellingPreference: [TravellingPreference] {get}
+    var destination: Destination {get}
+    var travellingPreference: TravellingPreference {get}
+    init(destination: Destination, travellingPreference: TravellingPreference)
 }
 
 enum Destination: String {
-    case NewYork
-    case Seattle
-    case SanFrancisco
-    case Boston
-    case Austin
-    case Chicago
+    case NewYork = "New York"
+    case Seattle = "Seattle"
+    case SanFrancisco = "San Francsico"
+    case Boston = "Boston"
+    case Austin = "Austin"
+    case Chicago = "Chicago"
 }
 
 enum TravellingPreference {
@@ -32,10 +33,14 @@ enum TravellingPreference {
     case NightOwl
 }
 
+enum Errors: ErrorType {
+    case InvalidPath
+}
+
 class Traveller: TravellerType{
-   var destination: [Destination]
-   var travellingPreference: [TravellingPreference]
-    init(destination: [Destination], travellingPreference: [TravellingPreference]){
+   var destination: Destination
+   var travellingPreference: TravellingPreference
+    required init(destination: Destination, travellingPreference: TravellingPreference){
         self.destination = destination
         self.travellingPreference = travellingPreference
     }
