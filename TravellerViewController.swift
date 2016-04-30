@@ -10,34 +10,36 @@ import UIKit
 
 class TravellerViewController: UIViewController {
     
-    var location: Destination!
+    var destination: Destination!
+    var preference: TravellingPreference!
     
     @IBAction func newYorkDestination(sender: AnyObject) {
-        location = Destination.NewYork
-        print(location)
+        destination = Destination.NewYork
     }
     
     @IBAction func seattleDestination(sender: AnyObject) {
-        location = Destination.Seattle
-        print(location)
+        destination = Destination.Seattle
     }
     
     @IBAction func sanFranDestination(sender: AnyObject) {
-        location = Destination.SanFrancisco
+        destination = Destination.SanFrancisco
     }
     
     @IBAction func bostonDestination(sender: AnyObject) {
-        location = Destination.Boston
+        destination = Destination.Boston
     }
     
     @IBAction func austinDestination(sender: AnyObject) {
-        location = Destination.Austin
+        destination = Destination.Austin
     }
     
     @IBAction func chicagoDestination(sender: AnyObject) {
-        location = Destination.Chicago
+        destination = Destination.Chicago
     }
     
     
+    @IBAction func adventurerPreference(sender: AnyObject) {
+        
+    }
     
 }

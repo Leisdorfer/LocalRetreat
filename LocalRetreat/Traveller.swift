@@ -29,9 +29,6 @@ enum TravellingPreference {
     case Foodie
     case CulturalExplorer
     case HistoryBuff
-    case AuthenticExperiencer
-    case Budgeter
-    case HighFlyer
     case NightOwl
 }
 
