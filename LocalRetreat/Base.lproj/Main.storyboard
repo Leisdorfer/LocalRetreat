@@ -175,26 +175,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="newYorkDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="bNt-l5-cT8"/>
+                                    <action selector="newYorkDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="JXl-vf-Fc2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmu-Ve-zee">
-                                <rect key="frame" x="45" y="183" width="132" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="92" id="7fu-kz-QA1"/>
-                                    <constraint firstAttribute="height" constant="21" id="KRz-Gu-4hB"/>
-                                    <constraint firstAttribute="width" constant="92" id="Vje-wb-Q5m"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="7fu-kz-QA1"/>
-                                        <exclude reference="Vje-wb-Q5m"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5d-qM-Opp">
                                 <rect key="frame" x="45" y="333" width="132" height="134"/>
                                 <constraints>
@@ -306,8 +289,8 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="ogC-xs-lW5"/>
                                         <exclude reference="Juh-7O-ZBk"/>
+                                        <exclude reference="ogC-xs-lW5"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -327,6 +310,23 @@
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmu-Ve-zee">
+                                <rect key="frame" x="45" y="183" width="132" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="7fu-kz-QA1"/>
+                                    <constraint firstAttribute="height" constant="21" id="KRz-Gu-4hB"/>
+                                    <constraint firstAttribute="width" constant="92" id="Vje-wb-Q5m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7fu-kz-QA1"/>
+                                        <exclude reference="Vje-wb-Q5m"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -432,7 +432,6 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Culture"/>
                                 <connections>
-                                    <action selector="adventurerPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="SDl-t8-uNh"/>
                                     <action selector="cultureExplorerPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="IUd-Hl-vBK"/>
                                 </connections>
                             </button>
@@ -444,7 +443,6 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Foodie"/>
                                 <connections>
-                                    <action selector="adventurerPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="x6l-Lj-lwj"/>
                                     <action selector="foodiePreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="fBr-KM-tBl"/>
                                 </connections>
                             </button>
@@ -458,7 +456,6 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="History"/>
                                 <connections>
-                                    <action selector="adventurerPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="X0i-kl-naa"/>
                                     <action selector="historyBuffPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="HuH-jg-ZSN"/>
                                 </connections>
                             </button>
@@ -470,7 +467,6 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Night"/>
                                 <connections>
-                                    <action selector="adventurerPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="2kT-jo-X9F"/>
                                     <action selector="nightOwlPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="PF5-eP-aGA"/>
                                 </connections>
                             </button>
@@ -482,7 +478,6 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Art"/>
                                 <connections>
-                                    <action selector="adventurerPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="TWb-IZ-FDZ"/>
                                     <action selector="artDesignLoverPreference:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="vAp-10-ibf"/>
                                 </connections>
                             </button>
@@ -568,7 +563,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <action selector="submitMatch:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="EUr-ix-ng2"/>
+                                    <action selector="submitMatch:" destination="Z5I-ho-RgT" eventType="touchUpInside" id="jL3-QS-KzU"/>
                                     <segue destination="z0M-iR-pav" kind="show" id="3va-0f-KvN"/>
                                 </connections>
                             </button>

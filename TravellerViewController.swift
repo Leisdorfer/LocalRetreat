@@ -10,19 +10,22 @@ import UIKit
 
 class TravellerViewController: UIViewController {
     
-    var location: String = ""
-    var preference: String = ""
+    var location: String?
+    var preference: String?
 
-    
- 
     
     @IBOutlet weak var matchLabel: UILabel!
     
    
+    
     @IBAction func newYorkDestination(sender: AnyObject) {
-        location = Destination.NewYork.rawValue
+        if let location = String?(Destination.NewYork.rawValue){
+            let result = matchTravellerWithLocal(location)
+            matchLabel.text = result
+        }
         //  matchLabel.text = matchTravellerWithLocal(location)
     }
+    
     
     
     @IBAction func seattleDestination(sender: AnyObject) {
@@ -72,10 +75,11 @@ class TravellerViewController: UIViewController {
     
     
     @IBAction func submitMatch(sender: AnyObject) {
-     //   let message = matchTravellerWithLocal(Destination.NewYork.rawValue, type: TravellingPreference.Adventurer.rawValue)
-       // matchLabel.text = message
-        
+        //   let message = matchTravellerWithLocal(Destination.NewYork.rawValue, type: TravellingPreference.Adventurer.rawValue)
+        // matchLabel.text = message
     }
+   
+   
    /* var travellerInformation: Traveller{
         return Traveller(destination: location, travellingPreference: preference)
     }
@@ -108,8 +112,8 @@ class TravellerViewController: UIViewController {
     
     func matchTravellerWithLocal(location:String) -> String{
         var message = " "
-        let locals = LocalsInformation().locals
-        /*for (name, information) in locals{
+        /*let locals = LocalsInformation().locals
+        for (name, information) in locals{
             let city = information["City"]
             if "New York" == location{
                 message = "Meet your local: \(name), a local of \(city)"
