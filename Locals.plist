@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Local</key>
+	<array>
+		<string>Jared</string>
+		<string>Beth</string>
+		<string>Emily</string>
+		<string>Eric</string>
+		<string>Paul</string>
+		<string>Leslie</string>
+		<string>Rachel</string>
+		<string>Kavon</string>
+		<string>Lauren</string>
+		<string>Ben</string>
+		<string>Rebecca</string>
+		<string>Susie</string>
+		<string>Freddy</string>
+	</array>
+	<key>City</key>
+	<array>
+		<string>Seattle</string>
+		<string>Seattle</string>
+		<string>Boston</string>
+		<string>Boston</string>
+		<string>Chicago</string>
+		<string>Chicago</string>
+		<string>San Fran</string>
+		<string>San Fran</string>
+		<string>San Fran</string>
+		<string>New York</string>
+		<string>New York</string>
+		<string>Austin </string>
+		<string>Austin</string>
+	</array>
+	<key>Preference</key>
+	<array>
+		<string>Foodie</string>
+		<string>Adventurer</string>
+		<string>HistoryBuff</string>
+		<string>ArtDesignLover</string>
+		<string>CulturalExplorer</string>
+		<string>NightOwl</string>
+		<string>Foodie</string>
+		<string>Adventurer</string>
+		<string>HistoryBuff</string>
+		<string>ArtDesignLover</string>
+		<string>CulturalExplorer</string>
+		<string>NightOwl</string>
+		<string>Adventurer</string>
+	</array>
+</dict>
+</plist>
