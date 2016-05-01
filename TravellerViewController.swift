@@ -20,10 +20,10 @@ class TravellerViewController: UIViewController {
     
     @IBAction func newYorkDestination(sender: AnyObject) {
         if let location = String?(Destination.NewYork.rawValue){
-            let result = matchTravellerWithLocal(location)
-            matchLabel.text = result
+            let message = matchTravellerWithLocal(location)
+           // matchLabel.text = message
         }
-        //  matchLabel.text = matchTravellerWithLocal(location)
+       
     }
     
     
@@ -75,7 +75,6 @@ class TravellerViewController: UIViewController {
     
     
     @IBAction func submitMatch(sender: AnyObject) {
-        //   let message = matchTravellerWithLocal(Destination.NewYork.rawValue, type: TravellingPreference.Adventurer.rawValue)
         // matchLabel.text = message
     }
    
