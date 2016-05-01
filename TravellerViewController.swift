@@ -29,7 +29,10 @@ class TravellerViewController: UIViewController {
     
     
     @IBAction func seattleDestination(sender: AnyObject) {
-        location = Destination.Seattle.rawValue
+        if let location = String?(Destination.Seattle.rawValue){
+            let message = matchTravellerWithLocal(location)
+            matchLabel.text = message
+        }
     }
     
     @IBAction func sanFranDestination(sender: AnyObject) {
@@ -111,21 +114,20 @@ class TravellerViewController: UIViewController {
     
     func matchTravellerWithLocal(location:String) -> String{
         var message = " "
-        /*let locals = LocalsInformation().locals
-        for (name, information) in locals{
-            let city = information["City"]
-            if "New York" == location{
-                message = "Meet your local: \(name), a local of \(city)"
-            }else{
-                message = "Apologies, there aren't in \(city) on LocalRetreat. Try again soon!"
-                break
-
-            }*/
-         if location ==  "New York"{
-            message = "We have a match!"
+        let locals = LocalsInformation().locals
+        for (local, information) in locals{
+            if let city = information["City"]{
+                if city == location{
+                    message = "Meet \(local), a local of \(city)"
+                }
+            }
+        }
+        if message == " "{
+            message = "Apologies, there are not any locals in \(location) on LocalRetreat. Try again soon!"
         }
         return message
     }
+    
     /*func matchTraveller(location: Destination, preference: TravellingPreference) -> String{
         var message = ""
         if let path = NSBundle.mainBundle().pathForResource("Locals", ofType: "plist"){
