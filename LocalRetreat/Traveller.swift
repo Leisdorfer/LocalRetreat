@@ -24,13 +24,13 @@ enum Destination: String {
     case Chicago = "Chicago"
 }
 
-enum TravellingPreference {
-    case Adventurer
-    case ArtDesignLover
-    case Foodie
-    case CulturalExplorer
-    case HistoryBuff
-    case NightOwl
+enum TravellingPreference: String{
+    case Adventurer = "Adventurer"
+    case ArtDesignLover = "Art Design Lover"
+    case Foodie = "Foodie"
+    case CulturalExplorer = "Cultural Explorer"
+    case HistoryBuff = "History Buff"
+    case NightOwl = "Night Owl"
 }
 
 enum Errors: ErrorType {
