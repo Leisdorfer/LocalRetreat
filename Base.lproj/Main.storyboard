@@ -178,17 +178,6 @@
                                     <action selector="newYorkDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="JXl-vf-Fc2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5d-qM-Opp">
-                                <rect key="frame" x="45" y="333" width="132" height="134"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="132" id="2ek-U5-OVC"/>
-                                    <constraint firstAttribute="height" constant="134" id="C4g-Th-fGt"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="San Francisco"/>
-                                <connections>
-                                    <action selector="sanFranDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="4XP-1B-fIs"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyP-yt-6yk">
                                 <rect key="frame" x="237" y="174" width="132" height="132"/>
                                 <constraints>
@@ -332,6 +321,14 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5d-qM-Opp">
+                                <rect key="frame" x="45" y="333" width="132" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="2ek-U5-OVC"/>
+                                    <constraint firstAttribute="height" constant="134" id="C4g-Th-fGt"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="San Francisco"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
