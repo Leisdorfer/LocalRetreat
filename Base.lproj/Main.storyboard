@@ -629,6 +629,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Matching to local in 3..2..1..(psst click button below)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emg-k8-8gR">
+                                <rect key="frame" x="71" y="149" width="273" height="85"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBR-qS-STR">
                                 <rect key="frame" x="132" y="287" width="151" height="64"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -638,11 +644,35 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fEC-7O-dcr">
-                                <rect key="frame" x="140" y="236" width="134" height="123"/>
+                                <rect key="frame" x="140" y="249" width="134" height="123"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Matching to local in 3..2..1..(psst click button below)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emg-k8-8gR">
-                                <rect key="frame" x="71" y="149" width="273" height="85"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="22"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Message" translatesAutoresizingMaskIntoConstraints="NO" id="unh-bL-SYg">
+                                <rect key="frame" x="31" y="400" width="49" height="48"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plan" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ8-vB-dz7">
+                                <rect key="frame" x="31" y="473" width="49" height="48"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Meet" translatesAutoresizingMaskIntoConstraints="NO" id="S6b-ZC-Q8o">
+                                <rect key="frame" x="31" y="560" width="49" height="48"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="244-67-oGW">
+                                <rect key="frame" x="107" y="473" width="287" height="72"/>
+                                <string key="text">Plan your trip with a local
+	-Ask for city tips
+	-Ask local to review itinerary </string>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explore your destination with a local" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCd-B3-xrN">
+                                <rect key="frame" x="107" y="560" width="287" height="48"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connect with a local via their @LocalRetreat email account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVH-Pd-VyK">
+                                <rect key="frame" x="107" y="400" width="287" height="48"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -651,9 +681,12 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="connectWithLocal" destination="OVH-Pd-VyK" id="LDB-x0-sd7"/>
+                        <outlet property="exploreWithLocal" destination="xCd-B3-xrN" id="gaw-ji-gyf"/>
                         <outlet property="localImages" destination="fEC-7O-dcr" id="aMb-Du-SOb"/>
                         <outlet property="matchLabel" destination="emg-k8-8gR" id="Spc-F2-xid"/>
                         <outlet property="matchLocalLabel" destination="tBR-qS-STR" id="OFe-7c-XZs"/>
+                        <outlet property="planWithLocal" destination="244-67-oGW" id="Ss8-0R-vGq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c19-cw-VjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -688,8 +721,11 @@
         <image name="Culture" width="1080" height="720"/>
         <image name="Foodie" width="1080" height="720"/>
         <image name="History" width="2600" height="2450"/>
+        <image name="Meet" width="42" height="42"/>
+        <image name="Message" width="42" height="42"/>
         <image name="New York" width="1080" height="720"/>
         <image name="Night" width="1080" height="810"/>
+        <image name="Plan" width="42" height="42"/>
         <image name="San Francisco" width="1080" height="720"/>
         <image name="Seattle" width="1280" height="665"/>
         <image name="Travel " width="512" height="736"/>

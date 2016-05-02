@@ -71,6 +71,12 @@ class TravellerViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var connectWithLocal: UILabel!
+    
+    @IBOutlet weak var planWithLocal: UILabel!
+    
+    @IBOutlet weak var exploreWithLocal: UILabel!
+    
     @IBAction func matchLocal(sender: AnyObject) {
         matchLabel.text = userDefaults.stringForKey("Message")
         matchLocalLabel.hidden = true
@@ -82,11 +88,19 @@ class TravellerViewController: UIViewController {
             let maleImage = String(format: "Male%i", randomImageNumber)
             self.localImages.image = UIImage(named: maleImage)
         }
+        let name = userDefaults.stringForKey("Name")
+        let city = userDefaults.stringForKey("City")
+        connectWithLocal.text = "Connect with \(name!) via \(name!)@LocalRetreat"
+        planWithLocal.text = "Plan your trip to \(city!) with \(name!)"
+        exploreWithLocal.text = "Explore \(city!) with \(name!)"
         
     }
     @IBOutlet weak var matchLocalLabel: UIButton!
     
     @IBOutlet weak var localImages: UIImageView!
+    
+    
+    
     
     func matchTravellerWithLocal(location:String, preference: String) -> String{
         var message = " "
@@ -95,6 +109,7 @@ class TravellerViewController: UIViewController {
             if let city = information["City"]{
                 if city == location{
                     message = "Meet \(local), a local of \(city)"
+                    userDefaults.setValue(local, forKey: "Name")
                     if information["Gender"] == Gender.Female.rawValue{
                         userDefaults.setValue(Gender.Female.rawValue, forKey: "Gender")
                     }else{
