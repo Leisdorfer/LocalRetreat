@@ -146,6 +146,18 @@ class TravellerViewController: UIViewController, MFMailComposeViewControllerDele
         return localMail
     }
     
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        switch result.rawValue{
+        case MFMailComposeResultCancelled.rawValue:
+            print("Mail cancelled")
+        case MFMailComposeResultSent.rawValue:
+            print("Mail sent")
+        default:
+            break
+        }
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
     
    
