@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class TravellerViewController: UIViewController {
+class TravellerViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
@@ -62,15 +63,6 @@ class TravellerViewController: UIViewController {
        userDefaults.setValue(TravellingPreference.NightOwl.rawValue, forKey: "Preference")
     }
     
-    @IBAction func submitMatch(sender: AnyObject) {
-        if let location = userDefaults.stringForKey("City") {
-            if let preference = userDefaults.stringForKey("Preference"){
-                let message = matchTravellerWithLocal(location, preference: preference)
-                userDefaults.setValue(message, forKey: "Message")
-            }
-        }
-    }
-    
     @IBOutlet weak var connectWithLocal: UILabel!
     
     @IBOutlet weak var planWithLocal: UILabel!
@@ -78,6 +70,12 @@ class TravellerViewController: UIViewController {
     @IBOutlet weak var exploreWithLocal: UILabel!
     
     @IBAction func matchLocal(sender: AnyObject) {
+        if let location = userDefaults.stringForKey("City") {
+            if let preference = userDefaults.stringForKey("Preference"){
+                let message = matchTravellerWithLocal(location, preference: preference)
+                userDefaults.setValue(message, forKey: "Message")
+            }
+        }
         matchLabel.text = userDefaults.stringForKey("Message")
         matchLocalLabel.hidden = true
         let randomImageNumber = arc4random_uniform(4)+1
@@ -93,15 +91,22 @@ class TravellerViewController: UIViewController {
         connectWithLocal.text = "Connect with \(name!) via \(name!)@LocalRetreat"
         planWithLocal.text = "Plan your trip to \(city!) with \(name!)"
         exploreWithLocal.text = "Explore \(city!) with \(name!)"
-        
+        emailButton.setTitle("Email \(name!)", forState: UIControlState.Normal)
+        emailButton.backgroundColor = UIColor.whiteColor()
     }
     @IBOutlet weak var matchLocalLabel: UIButton!
     
     @IBOutlet weak var localImages: UIImageView!
     
+    @IBOutlet weak var emailButton: UIButton!
     
-    
-    
+    @IBAction func emailLocal(sender: AnyObject) {
+        let localEmail = emailLocal()
+        if MFMailComposeViewController.canSendMail(){
+            self.presentViewController(localEmail, animated: true, completion: nil)
+            
+        }
+    }
     func matchTravellerWithLocal(location:String, preference: String) -> String{
         var message = " "
         let locals = LocalsInformation().locals
@@ -129,6 +134,16 @@ class TravellerViewController: UIViewController {
             }
         
         return message
+    }
+    
+    func emailLocal() -> MFMailComposeViewController{
+        let name = userDefaults.stringForKey("Name")
+        let city = userDefaults.stringForKey("City")
+        let localMail = MFMailComposeViewController()
+        localMail.mailComposeDelegate = self
+        localMail.setToRecipients(["\(name!)@LocalRetreat.com"])
+        localMail.setSubject("LocalRetreat Outreach: \(city!)")
+        return localMail
     }
     
 }

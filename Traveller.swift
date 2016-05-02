@@ -33,10 +33,6 @@ enum TravellingPreference: String{
     case NightOwl = "Night Owl"
 }
 
-enum Errors: ErrorType {
-    case InvalidPath
-}
-
 class Traveller: TravellerType{
    var destination: Destination
    var travellingPreference: TravellingPreference
