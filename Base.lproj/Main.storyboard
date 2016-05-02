@@ -176,6 +176,7 @@
                                 </state>
                                 <connections>
                                     <action selector="newYorkDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="JXl-vf-Fc2"/>
+                                    <segue destination="Z5I-ho-RgT" kind="show" id="pB1-OP-1Du"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyP-yt-6yk">
@@ -187,6 +188,7 @@
                                 <state key="normal" title="Button" image="Seattle"/>
                                 <connections>
                                     <action selector="seattleDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="5fe-hb-KXf"/>
+                                    <segue destination="Z5I-ho-RgT" kind="show" id="p85-Jx-Yfs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seattle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otp-cy-B9Z">
@@ -207,6 +209,7 @@
                                 <state key="normal" image="Boston"/>
                                 <connections>
                                     <action selector="bostonDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="BTj-EJ-2W8"/>
+                                    <segue destination="Z5I-ho-RgT" kind="show" id="f9p-OO-eRE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boston" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nW3-P1-4jL">
@@ -227,6 +230,7 @@
                                 <state key="normal" title="Button" image="Chicago"/>
                                 <connections>
                                     <action selector="chicagoDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="vhC-Ek-lxn"/>
+                                    <segue destination="Z5I-ho-RgT" kind="show" id="4Pz-77-8Ft"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czy-vE-fLB">
@@ -238,6 +242,7 @@
                                 <state key="normal" title="Button" image="Austin"/>
                                 <connections>
                                     <action selector="austinDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="9Dy-Jf-CyT"/>
+                                    <segue destination="Z5I-ho-RgT" kind="show" id="pHv-St-e76"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Fran" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu0-IE-wIG">
@@ -283,18 +288,6 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7S-Qa-ego">
-                                <rect key="frame" x="96" y="668" width="222" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="BQc-1O-DZ4"/>
-                                    <constraint firstAttribute="width" constant="222" id="SQ8-up-lWc"/>
-                                </constraints>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <segue destination="Z5I-ho-RgT" kind="show" id="9eC-ep-gJY"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your destination" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDJ-A1-XrE">
                                 <rect key="frame" x="67" y="101" width="290" height="29"/>
                                 <constraints>
@@ -330,6 +323,7 @@
                                 <state key="normal" title="Button" image="San Francisco"/>
                                 <connections>
                                     <action selector="sanFranDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="SrN-BM-m1E"/>
+                                    <segue destination="Z5I-ho-RgT" kind="show" id="pRz-up-5ac"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -359,18 +353,14 @@
                             <constraint firstItem="vpN-ag-Hee" firstAttribute="leading" secondItem="zu0-IE-wIG" secondAttribute="trailing" constant="60" id="RZN-5d-vcW"/>
                             <constraint firstItem="5YI-RF-Rk7" firstAttribute="leading" secondItem="vBp-YE-LL2" secondAttribute="trailing" constant="60" id="Rvb-PQ-FCn"/>
                             <constraint firstItem="vpN-ag-Hee" firstAttribute="top" secondItem="Otp-cy-B9Z" secondAttribute="bottom" constant="129" id="TE2-Bd-F8Z"/>
-                            <constraint firstItem="d7S-Qa-ego" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="76" id="TL9-sB-TBL"/>
                             <constraint firstItem="nyP-yt-6yk" firstAttribute="leading" secondItem="VYO-tz-hVM" secondAttribute="trailing" constant="42" id="Tlr-dw-c1s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Otp-cy-B9Z" secondAttribute="trailing" constant="25" id="VDK-dx-nU8"/>
                             <constraint firstItem="czy-vE-fLB" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="25" id="WfP-sO-KQb"/>
-                            <constraint firstItem="d7S-Qa-ego" firstAttribute="top" secondItem="czy-vE-fLB" secondAttribute="bottom" constant="40" id="Yrm-AD-h1c"/>
                             <constraint firstItem="Zmu-Ve-zee" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="25" id="a7p-du-LxB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="d7S-Qa-ego" secondAttribute="trailing" constant="76" id="adN-r1-bqE"/>
                             <constraint firstItem="nW3-P1-4jL" firstAttribute="leading" secondItem="zu0-IE-wIG" secondAttribute="trailing" constant="60" id="b0B-bH-t7Z"/>
                             <constraint firstItem="nyP-yt-6yk" firstAttribute="leading" secondItem="Zmu-Ve-zee" secondAttribute="trailing" constant="60" id="cX5-81-Wgp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nyP-yt-6yk" secondAttribute="trailing" constant="25" id="dRu-39-q8p"/>
                             <constraint firstItem="T5d-qM-Opp" firstAttribute="top" secondItem="VYO-tz-hVM" secondAttribute="bottom" constant="27" id="dUQ-NW-6kb"/>
-                            <constraint firstItem="7rc-hh-6vq" firstAttribute="top" secondItem="d7S-Qa-ego" secondAttribute="bottom" constant="38" id="e7c-g2-MMU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TDJ-A1-XrE" secondAttribute="trailing" constant="37" id="ee6-VV-zzW"/>
                             <constraint firstItem="vpN-ag-Hee" firstAttribute="top" secondItem="nyP-yt-6yk" secondAttribute="bottom" constant="27.5" id="jgW-0y-AEJ"/>
                             <constraint firstItem="zu0-IE-wIG" firstAttribute="leading" secondItem="ScW-XD-g1j" secondAttribute="leadingMargin" constant="25" id="pFA-SL-NtE"/>
@@ -389,7 +379,6 @@
                                 <exclude reference="Iyn-Ec-AjM"/>
                                 <exclude reference="OlC-At-Vjr"/>
                                 <exclude reference="Tlr-dw-c1s"/>
-                                <exclude reference="Yrm-AD-h1c"/>
                                 <exclude reference="4rm-3m-oMp"/>
                                 <exclude reference="FGC-ud-Z3n"/>
                             </mask>
@@ -640,18 +629,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Match!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emg-k8-8gR">
-                                <rect key="frame" x="71" y="149" width="273" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Matching to local in 3..2..1..(psst click button below)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emg-k8-8gR">
+                                <rect key="frame" x="71" y="149" width="273" height="68"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBR-qS-STR">
+                                <rect key="frame" x="132" y="287" width="151" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Match to a local"/>
+                                <connections>
+                                    <action selector="matchLocal:" destination="z0M-iR-pav" eventType="touchUpInside" id="O0b-Nj-CMt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="matchLabel" destination="emg-k8-8gR" id="Ttv-op-Xhn"/>
+                        <outlet property="matchLabel" destination="emg-k8-8gR" id="Spc-F2-xid"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c19-cw-VjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -692,4 +689,7 @@
         <image name="Seattle" width="1280" height="665"/>
         <image name="Travel " width="512" height="736"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="pRz-up-5ac"/>
+    </inferredMetricsTieBreakers>
 </document>
