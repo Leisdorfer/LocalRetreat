@@ -328,6 +328,9 @@
                                     <constraint firstAttribute="height" constant="134" id="C4g-Th-fGt"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="San Francisco"/>
+                                <connections>
+                                    <action selector="sanFranDestination:" destination="WoY-Bn-7w2" eventType="touchUpInside" id="SrN-BM-m1E"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>

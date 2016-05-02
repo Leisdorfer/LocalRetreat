@@ -10,9 +10,6 @@ import UIKit
 
 class TravellerViewController: UIViewController {
     
-    var location: String?
-    var preference: String?
-    var message: String?
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
     @IBOutlet weak var matchLabel: UILabel!
@@ -23,57 +20,57 @@ class TravellerViewController: UIViewController {
         userDefaults.setValue(Destination.NewYork.rawValue, forKey: "City")
     }
     
-    
+    @IBAction func sanFranDestination(sender: AnyObject) {
+        userDefaults.setValue(Destination.SanFrancisco.rawValue, forKey: "City")
+    }
     
     @IBAction func seattleDestination(sender: AnyObject) {
         userDefaults.setValue(Destination.Seattle.rawValue, forKey: "City")
-        }
     }
-    
 
-    
     @IBAction func bostonDestination(sender: AnyObject) {
-        
+        userDefaults.setValue(Destination.Boston.rawValue, forKey: "City")
     }
-
+    
     @IBAction func austinDestination(sender: AnyObject) {
-        
+        userDefaults.setValue(Destination.Austin.rawValue, forKey: "City")
     }
     
     @IBAction func chicagoDestination(sender: AnyObject) {
-       
+        userDefaults.setValue(Destination.Chicago.rawValue, forKey: "City")
     }
     
     @IBAction func adventurerPreference(sender: AnyObject) {
-       
-        
+      userDefaults.setValue(TravellingPreference.Adventurer.rawValue, forKey: "Preference")
     }
     
     @IBAction func cultureExplorerPreference(sender: AnyObject) {
-        
+        userDefaults.setValue(TravellingPreference.CulturalExplorer.rawValue, forKey: "Preference")
     }
     
     @IBAction func historyBuffPreference(sender: AnyObject) {
-        
+        userDefaults.setValue(TravellingPreference.HistoryBuff.rawValue, forKey: "Preference")
     }
     
     @IBAction func artDesignLoverPreference(sender: AnyObject) {
-        
+        userDefaults.setValue(TravellingPreference.ArtDesignLover.rawValue, forKey: "Preference")
     }
     
     @IBAction func foodiePreference(sender: AnyObject) {
-        
+        userDefaults.setValue(TravellingPreference.Foodie.rawValue, forKey: "Preference")
     }
     
     @IBAction func nightOwlPreference(sender: AnyObject) {
-        
+       userDefaults.setValue(TravellingPreference.NightOwl.rawValue, forKey: "Preference")
     }
     
     
     @IBAction func submitMatch(sender: AnyObject) {
-        if let location = userDefaults.stringForKey("City"){
-            let message = matchTravellerWithLocal(location)
-            userDefaults.setValue(message, forKey: "Message")
+        if let location = userDefaults.stringForKey("City") {
+            if let preference = userDefaults.stringForKey("Preference"){
+                let message = matchTravellerWithLocal(location, preference: preference)
+                userDefaults.setValue(message, forKey: "Message")
+            }
         }
         if let result = userDefaults.stringForKey("Message"){
             matchLabel.text = result
@@ -111,7 +108,7 @@ class TravellerViewController: UIViewController {
         return message
     }*/
     
-    func matchTravellerWithLocal(location:String) -> String{
+    func matchTravellerWithLocal(location:String, preference: String) -> String{
         var message = " "
         let locals = LocalsInformation().locals
         for (local, information) in locals{
