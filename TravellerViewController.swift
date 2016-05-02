@@ -72,9 +72,9 @@ class TravellerViewController: UIViewController {
                 userDefaults.setValue(message, forKey: "Message")
             }
         }
-    /*    if let result = userDefaults.stringForKey("Message"){
+       if let result = userDefaults.stringForKey("Message"){
             matchLabel.text = result
-        }*/
+        }
     }
    
    
@@ -84,28 +84,6 @@ class TravellerViewController: UIViewController {
     
     var message: String {
         return (matchTravellerWithLocal(travellerInformation))
-    }*/
-    
-  
-    
-    /*func matchTravellerWithLocal(location: String, type: String) -> String {
-        var message = " "
-        let locals = LocalsInformation().locals
-        for (name, information) in locals{
-            let city = information["City"]
-            print(city)
-            let preference = information["Preference"]
-            if city == location{
-                message = "Meet your local: \(name), a local of \(city)"
-            }else{
-                message = "Apologies, there aren't in \(city) on LocalRetreat. Try again soon!"
-                break
-            }
-            if preference == type{
-                message += "who is also a \(preference)"
-            }
-        }
-        return message
     }*/
     
     func matchTravellerWithLocal(location:String, preference: String) -> String{
