@@ -18,7 +18,7 @@ protocol TravellerType{
 enum Destination: String {
     case NewYork = "New York"
     case Seattle = "Seattle"
-    case SanFrancisco = "San Francsico"
+    case SanFrancisco = "San Francisco"
     case Boston = "Boston"
     case Austin = "Austin"
     case Chicago = "Chicago"

@@ -72,9 +72,9 @@ class TravellerViewController: UIViewController {
                 userDefaults.setValue(message, forKey: "Message")
             }
         }
-        if let result = userDefaults.stringForKey("Message"){
+    /*    if let result = userDefaults.stringForKey("Message"){
             matchLabel.text = result
-        }
+        }*/
     }
    
    
@@ -117,10 +117,17 @@ class TravellerViewController: UIViewController {
                     message = "Meet \(local), a local of \(city)"
                 }
             }
+            if let type = information["Preference"]{
+                if type == preference && message != " "{
+                    message += " who is a \(type)"
+                    break
+                }
+            }
         }
         if message == " "{
             message = "Apologies, there are not any locals in \(location) on LocalRetreat. Try again soon!"
-        }
+            }
+        
         return message
     }
     
