@@ -10,9 +10,9 @@ import Foundation
 
 
 protocol TravellerType{
-    var destination: Destination {get}
-    var travellingPreference: TravellingPreference {get}
-    init(destination: Destination, travellingPreference: TravellingPreference)
+    var destination: String {get}
+    var travellingPreference: String {get}
+    init(destination: String, travellingPreference: String)
 }
 
 enum Destination: String {
@@ -34,9 +34,9 @@ enum TravellingPreference: String{
 }
 
 class Traveller: TravellerType{
-   var destination: Destination
-   var travellingPreference: TravellingPreference
-    required init(destination: Destination, travellingPreference: TravellingPreference){
+   var destination: String
+   var travellingPreference: String
+    required init(destination: String, travellingPreference: String){
         self.destination = destination
         self.travellingPreference = travellingPreference
     }

@@ -72,7 +72,8 @@ class TravellerViewController: UIViewController, MFMailComposeViewControllerDele
     @IBAction func matchLocal(sender: AnyObject) {
         if let location = userDefaults.stringForKey("City") {
             if let preference = userDefaults.stringForKey("Preference"){
-                let message = matchTravellerWithLocal(location, preference: preference)
+                let traveller = Traveller.init(destination: location, travellingPreference: preference)
+                let message = matchTravellerWithLocal(traveller)
                 userDefaults.setValue(message, forKey: "Message")
             }
         }
@@ -107,12 +108,12 @@ class TravellerViewController: UIViewController, MFMailComposeViewControllerDele
             
         }
     }
-    func matchTravellerWithLocal(location:String, preference: String) -> String{
+    func matchTravellerWithLocal(traveller: Traveller) -> String{
         var message = " "
         let locals = LocalsInformation().locals
         for (local, information) in locals{
             if let city = information["City"]{
-                if city == location{
+                if city == traveller.destination{
                     message = "Meet \(local), a local of \(city)"
                     userDefaults.setValue(local, forKey: "Name")
                     if information["Gender"] == Gender.Female.rawValue{
@@ -123,14 +124,14 @@ class TravellerViewController: UIViewController, MFMailComposeViewControllerDele
                 }
             }
             if let type = information["Preference"]{
-                if type == preference && message != " "{
+                if type == traveller.travellingPreference && message != " "{
                     message += " who is a \(type)"
                     break
                 }
             }
         }
         if message == " "{
-            message = "Apologies, there are not any locals in \(location) on LocalRetreat. Try again soon!"
+            message = "Apologies, there are not any locals in \(traveller.destination) on LocalRetreat. Try again soon!"
             }
         
         return message
