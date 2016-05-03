@@ -680,40 +680,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Matching to local in 3..2..1..(psst click button below)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emg-k8-8gR">
-                                <rect key="frame" x="71" y="149" width="273" height="85"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matching to local in 3..2..1..(psst click button below)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emg-k8-8gR">
+                                <rect key="frame" x="71" y="97" width="273" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="gUf-jg-Nge"/>
+                                    <constraint firstAttribute="width" constant="273" id="wnL-kY-V7m"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBR-qS-STR">
-                                <rect key="frame" x="132" y="287" width="151" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBR-qS-STR">
+                                <rect key="frame" x="132" y="235" width="151" height="64"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="ooH-9y-epc"/>
+                                    <constraint firstAttribute="height" constant="64" id="yzo-pV-69E"/>
+                                </constraints>
                                 <state key="normal" title="Match to a local"/>
                                 <connections>
                                     <action selector="matchLocal:" destination="z0M-iR-pav" eventType="touchUpInside" id="O0b-Nj-CMt"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fEC-7O-dcr">
-                                <rect key="frame" x="140" y="249" width="134" height="123"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fEC-7O-dcr">
+                                <rect key="frame" x="132" y="190" width="160" height="153"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="jKG-MU-0co"/>
+                                    <constraint firstAttribute="width" constant="160" id="jjz-5v-lET"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Message" translatesAutoresizingMaskIntoConstraints="NO" id="unh-bL-SYg">
-                                <rect key="frame" x="31" y="400" width="49" height="48"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Message" translatesAutoresizingMaskIntoConstraints="NO" id="unh-bL-SYg">
+                                <rect key="frame" x="39" y="374" width="49" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="a4e-bb-WGo"/>
+                                    <constraint firstAttribute="height" constant="48" id="xsq-Vj-w5m"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plan" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ8-vB-dz7">
-                                <rect key="frame" x="31" y="473" width="49" height="48"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plan" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ8-vB-dz7">
+                                <rect key="frame" x="45" y="447" width="49" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="NHk-zI-heN"/>
+                                    <constraint firstAttribute="height" constant="48" id="h2x-O0-Bji"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Meet" translatesAutoresizingMaskIntoConstraints="NO" id="S6b-ZC-Q8o">
-                                <rect key="frame" x="31" y="560" width="49" height="48"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Meet" translatesAutoresizingMaskIntoConstraints="NO" id="S6b-ZC-Q8o">
+                                <rect key="frame" x="45" y="534" width="49" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="Chx-9h-t4M"/>
+                                    <constraint firstAttribute="height" constant="48" id="hF3-Dt-qL5"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connect with a local via their @LocalRetreat email account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVH-Pd-VyK">
-                                <rect key="frame" x="107" y="400" width="228" height="48"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="244-67-oGW">
-                                <rect key="frame" x="107" y="473" width="248" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="244-67-oGW">
+                                <rect key="frame" x="115" y="431" width="254" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="PdM-qH-GaT"/>
+                                    <constraint firstAttribute="width" constant="254" id="iMd-id-3vj"/>
+                                </constraints>
                                 <string key="text">Plan your trip with a local
 	-Ask for city tips
 	-Ask local to review itinerary </string>
@@ -721,20 +743,76 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explore your destination with a local" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCd-B3-xrN">
-                                <rect key="frame" x="107" y="560" width="248" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore your destination with a local" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCd-B3-xrN">
+                                <rect key="frame" x="121" y="534" width="254" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="H2X-Tt-kpL"/>
+                                    <constraint firstAttribute="width" constant="254" id="vUC-8R-tiB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDP-pz-83d">
-                                <rect key="frame" x="140" y="446" width="134" height="18.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDP-pz-83d">
+                                <rect key="frame" x="140" y="419" width="134" height="18.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="2pb-dd-div"/>
+                                    <constraint firstAttribute="height" constant="18.5" id="dwS-Ff-aka"/>
+                                </constraints>
                                 <connections>
                                     <action selector="emailLocal:" destination="z0M-iR-pav" eventType="touchUpInside" id="NbQ-vJ-Eaj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect with a local via their @LocalRetreat.com email account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVH-Pd-VyK">
+                                <rect key="frame" x="115" y="374" width="260" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="V2h-Ns-ViS"/>
+                                    <constraint firstAttribute="height" constant="48" id="XK6-RT-bSo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fEC-7O-dcr" firstAttribute="top" secondItem="emg-k8-8gR" secondAttribute="bottom" constant="8" id="408-Ve-xEN"/>
+                            <constraint firstItem="OVH-Pd-VyK" firstAttribute="leading" secondItem="unh-bL-SYg" secondAttribute="trailing" constant="27" id="7Ro-jJ-DVQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OVH-Pd-VyK" secondAttribute="trailing" constant="19" id="80r-Uz-Mo9"/>
+                            <constraint firstItem="fEC-7O-dcr" firstAttribute="top" secondItem="emg-k8-8gR" secondAttribute="bottom" constant="8" id="E5y-SH-n2P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="244-67-oGW" secondAttribute="trailing" constant="25" id="Hot-75-pWw"/>
+                            <constraint firstItem="ZZ8-vB-dz7" firstAttribute="top" secondItem="unh-bL-SYg" secondAttribute="bottom" constant="25" id="Ieg-TY-2AX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xCd-B3-xrN" secondAttribute="trailing" constant="19" id="JK7-gp-8vt"/>
+                            <constraint firstItem="OVH-Pd-VyK" firstAttribute="top" secondItem="fEC-7O-dcr" secondAttribute="bottom" constant="31" id="JMs-61-F3A"/>
+                            <constraint firstItem="xCd-B3-xrN" firstAttribute="top" secondItem="244-67-oGW" secondAttribute="bottom" constant="8" id="JZ5-99-uAB"/>
+                            <constraint firstItem="244-67-oGW" firstAttribute="top" secondItem="WDP-pz-83d" secondAttribute="bottom" constant="-6.5" id="Jlf-2M-chh"/>
+                            <constraint firstItem="tBR-qS-STR" firstAttribute="top" secondItem="emg-k8-8gR" secondAttribute="bottom" constant="53" id="NLO-Dl-gJF"/>
+                            <constraint firstItem="xCd-B3-xrN" firstAttribute="leading" secondItem="S6b-ZC-Q8o" secondAttribute="trailing" constant="27" id="Qkt-Px-bl5"/>
+                            <constraint firstItem="tBR-qS-STR" firstAttribute="leading" secondItem="oEj-Uo-7Kr" secondAttribute="leadingMargin" constant="112" id="QpO-6h-asz"/>
+                            <constraint firstItem="emg-k8-8gR" firstAttribute="top" secondItem="SnM-lq-4HD" secondAttribute="bottom" constant="33" id="S79-uj-Vf0"/>
+                            <constraint firstItem="emg-k8-8gR" firstAttribute="leading" secondItem="oEj-Uo-7Kr" secondAttribute="leadingMargin" constant="51" id="V2S-ux-6im"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="emg-k8-8gR" secondAttribute="trailing" constant="50" id="VN6-PG-0em"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fEC-7O-dcr" secondAttribute="trailing" constant="102" id="Vwa-43-RJD"/>
+                            <constraint firstItem="unh-bL-SYg" firstAttribute="top" secondItem="emg-k8-8gR" secondAttribute="bottom" constant="192" id="XjP-zj-MP0"/>
+                            <constraint firstItem="OVH-Pd-VyK" firstAttribute="top" secondItem="fEC-7O-dcr" secondAttribute="bottom" constant="31" id="YWf-LE-hVJ"/>
+                            <constraint firstItem="WDP-pz-83d" firstAttribute="top" secondItem="fEC-7O-dcr" secondAttribute="bottom" constant="76" id="Z79-mk-mVi"/>
+                            <constraint firstItem="unh-bL-SYg" firstAttribute="leading" secondItem="oEj-Uo-7Kr" secondAttribute="leadingMargin" constant="19" id="Zbg-Ne-zjh"/>
+                            <constraint firstItem="244-67-oGW" firstAttribute="leading" secondItem="ZZ8-vB-dz7" secondAttribute="trailing" constant="21" id="dOR-6d-tBC"/>
+                            <constraint firstItem="244-67-oGW" firstAttribute="top" secondItem="WDP-pz-83d" secondAttribute="bottom" constant="-6.5" id="eZD-Z8-SiD"/>
+                            <constraint firstItem="OVH-Pd-VyK" firstAttribute="top" secondItem="tBR-qS-STR" secondAttribute="bottom" constant="75" id="g8I-cw-n0r"/>
+                            <constraint firstItem="WDP-pz-83d" firstAttribute="leading" secondItem="oEj-Uo-7Kr" secondAttribute="leadingMargin" constant="120" id="hEi-47-JeU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WDP-pz-83d" secondAttribute="trailing" constant="120" id="jxg-2h-Bk4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tBR-qS-STR" secondAttribute="trailing" constant="111" id="qZ2-gp-1Lf"/>
+                            <constraint firstItem="fEC-7O-dcr" firstAttribute="leading" secondItem="oEj-Uo-7Kr" secondAttribute="leadingMargin" constant="112" id="ueE-5p-GwS"/>
+                            <constraint firstItem="S6b-ZC-Q8o" firstAttribute="top" secondItem="ZZ8-vB-dz7" secondAttribute="bottom" constant="39" id="vWN-JP-LV1"/>
+                            <constraint firstItem="ZZ8-vB-dz7" firstAttribute="leading" secondItem="oEj-Uo-7Kr" secondAttribute="leadingMargin" constant="25" id="xhU-1m-eC3"/>
+                            <constraint firstItem="S6b-ZC-Q8o" firstAttribute="leading" secondItem="oEj-Uo-7Kr" secondAttribute="leadingMargin" constant="25" id="yd0-u4-YXB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="YWf-LE-hVJ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
