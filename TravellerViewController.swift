@@ -72,7 +72,7 @@ class TravellerViewController: UIViewController, MFMailComposeViewControllerDele
     @IBAction func matchLocal(sender: AnyObject) {
         if let location = userDefaults.stringForKey("City") {
             if let preference = userDefaults.stringForKey("Preference"){
-                let traveller = Traveller.init(destination: location, travellingPreference: preference)
+                let traveller = Traveller(destination: location, travellingPreference: preference)
                 let message = matchTravellerWithLocal(traveller)
                 userDefaults.setValue(message, forKey: "Message")
             }
@@ -82,10 +82,10 @@ class TravellerViewController: UIViewController, MFMailComposeViewControllerDele
         let randomImageNumber = arc4random_uniform(4)+1
         if userDefaults.stringForKey("Gender") == Gender.Female.rawValue{
             let femaleImage = String(format: "Female%i", randomImageNumber)
-            self.localImages.image = UIImage(named: femaleImage)
+            localImages.image = UIImage(named: femaleImage)
         }else if userDefaults.stringForKey("Gender") == Gender.Male.rawValue{
             let maleImage = String(format: "Male%i", randomImageNumber)
-            self.localImages.image = UIImage(named: maleImage)
+            localImages.image = UIImage(named: maleImage)
         }
         let name = userDefaults.stringForKey("Name")
         let city = userDefaults.stringForKey("City")
