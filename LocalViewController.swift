@@ -42,6 +42,7 @@ class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
         let citySelected = localInput[0][pickerView.selectedRowInComponent(0)]
         let preferenceSelected = localInput[1][pickerView.selectedRowInComponent(1)]
         localContent.setValue(usernameTextField.text, forKey: "username")
+        localContent.synchronize()
         if let name = nameTextField.text, let gender = genderTextField.text, let username = usernameTextField.text{
             localContent.setValue(["Name": name, "City": citySelected, "Preference": preferenceSelected, "Gender": gender], forKey: username)
         }
@@ -53,7 +54,6 @@ class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
         usernameTextField.resignFirstResponder()
         return true
     }
-    
     
     @IBAction func submitButton(sender: AnyObject) {
         

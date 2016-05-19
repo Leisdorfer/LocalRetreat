@@ -72,21 +72,6 @@
                                     <segue destination="WoY-Bn-7w2" kind="show" id="Gug-Qf-zPu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIe-ch-A6U">
-                                <rect key="frame" x="115" y="649" width="184" height="34"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="0hm-Yc-EH6"/>
-                                    <constraint firstAttribute="width" constant="184" id="ArU-xB-jJl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="19"/>
-                                <state key="normal" title="Join as a local">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="JD0-IR-svG" kind="show" id="D4h-1K-E59"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oP-kK-Egv">
                                 <rect key="frame" x="27" y="332" width="120" height="143"/>
                                 <constraints>
@@ -109,6 +94,21 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIe-ch-A6U">
+                                <rect key="frame" x="115" y="649" width="184" height="34"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="0hm-Yc-EH6"/>
+                                    <constraint firstAttribute="width" constant="184" id="ArU-xB-jJl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="19"/>
+                                <state key="normal" title="Join as a local">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JD0-IR-svG" kind="show" id="D4h-1K-E59"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -441,10 +441,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us about yourself" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6N-Rm-1du">
-                                <rect key="frame" x="61" y="112" width="293" height="63"/>
+                                <rect key="frame" x="61" y="112" width="293" height="94.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="293" id="Ulr-CR-u5s"/>
-                                    <constraint firstAttribute="height" constant="63" id="leE-wY-N75"/>
+                                    <constraint firstAttribute="height" constant="94.5" id="leE-wY-N75"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -561,7 +561,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dkA-mw-7Ir" firstAttribute="top" secondItem="e6N-Rm-1du" secondAttribute="bottom" constant="8" id="9Ky-BX-wtK"/>
+                            <constraint firstItem="dkA-mw-7Ir" firstAttribute="top" secondItem="e6N-Rm-1du" secondAttribute="bottom" constant="-23.5" id="9Ky-BX-wtK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MN9-gK-YDs" secondAttribute="trailing" constant="47" id="AWl-Ar-Rol"/>
                             <constraint firstItem="mZM-5U-Slb" firstAttribute="leading" secondItem="If6-9O-sEw" secondAttribute="leadingMargin" constant="6" id="FP5-YE-EHn"/>
                             <constraint firstItem="cQj-eo-Cnp" firstAttribute="top" secondItem="MN9-gK-YDs" secondAttribute="bottom" constant="171" id="Ftx-l6-QhA"/>
@@ -884,10 +884,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matching to local in 3..2..1..(psst click button below)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emg-k8-8gR">
-                                <rect key="frame" x="71" y="97" width="273" height="85"/>
+                                <rect key="frame" x="20" y="97" width="374" height="85"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="gUf-jg-Nge"/>
-                                    <constraint firstAttribute="width" constant="273" id="wnL-kY-V7m"/>
+                                    <constraint firstAttribute="width" constant="374" id="wnL-kY-V7m"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -993,8 +993,8 @@
                             <constraint firstItem="xCd-B3-xrN" firstAttribute="leading" secondItem="S6b-ZC-Q8o" secondAttribute="trailing" constant="27" id="Qkt-Px-bl5"/>
                             <constraint firstItem="tBR-qS-STR" firstAttribute="leading" secondItem="oEj-Uo-7Kr" secondAttribute="leadingMargin" constant="112" id="QpO-6h-asz"/>
                             <constraint firstItem="emg-k8-8gR" firstAttribute="top" secondItem="SnM-lq-4HD" secondAttribute="bottom" constant="33" id="S79-uj-Vf0"/>
-                            <constraint firstItem="emg-k8-8gR" firstAttribute="leading" secondItem="oEj-Uo-7Kr" secondAttribute="leadingMargin" constant="51" id="V2S-ux-6im"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="emg-k8-8gR" secondAttribute="trailing" constant="50" id="VN6-PG-0em"/>
+                            <constraint firstItem="emg-k8-8gR" firstAttribute="leading" secondItem="oEj-Uo-7Kr" secondAttribute="leadingMargin" id="V2S-ux-6im"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="emg-k8-8gR" secondAttribute="trailing" id="VN6-PG-0em"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fEC-7O-dcr" secondAttribute="trailing" constant="102" id="Vwa-43-RJD"/>
                             <constraint firstItem="unh-bL-SYg" firstAttribute="top" secondItem="emg-k8-8gR" secondAttribute="bottom" constant="192" id="XjP-zj-MP0"/>
                             <constraint firstItem="OVH-Pd-VyK" firstAttribute="top" secondItem="fEC-7O-dcr" secondAttribute="bottom" constant="31" id="YWf-LE-hVJ"/>

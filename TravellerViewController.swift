@@ -110,11 +110,8 @@ class TravellerViewController: UIViewController, MFMailComposeViewControllerDele
     }
     func matchTravellerWithLocal(traveller: Traveller) -> String{
         var message = " "
-        //let locals = LocalsInformation().locals
-        
         for (local) in NSUserDefaults.standardUserDefaults().dictionaryRepresentation() {
             print(local)
-            //let username = userDefaults.stringForKey("username")
             if let information = userDefaults.dictionaryForKey(local.0){
                 print("Information: \(information)")
                 if let name = information["Name"], let city = information["City"], let gender = information["Gender"]{
@@ -128,14 +125,13 @@ class TravellerViewController: UIViewController, MFMailComposeViewControllerDele
                     } else{
                         userDefaults.setValue(Gender.Male.rawValue, forKey: "Gender")
                     }
-                    
-                }
                 }
             }
-            if let information = userDefaults.dictionaryForKey(local.0), let preference = information["Preference"]{
-                if preference as! String == traveller.travellingPreference && message != " "{
-                    message += "who is a \(preference)"
-                    break
+        }
+        if let information = userDefaults.dictionaryForKey(local.0), let preference = information["Preference"]{
+            if preference as! String == traveller.travellingPreference && message != " "{
+                message += "who is a \(preference)"
+                break
                 }
             }
         }
@@ -145,32 +141,6 @@ class TravellerViewController: UIViewController, MFMailComposeViewControllerDele
         }
         return message
     }
-        
-      /*  for (local, information) in locals{
-            if let city = information["City"]{
-                if city == traveller.destination{
-                    message = "Meet \(local), a local of \(city)"
-                    userDefaults.setValue(local, forKey: "Name")
-                    if information["Gender"] == Gender.Female.rawValue{
-                        userDefaults.setValue(Gender.Female.rawValue, forKey: "Gender")
-                    }else{
-                        userDefaults.setValue(Gender.Male.rawValue, forKey: "Gender")
-                    }
-                }
-            }
-            if let type = information["Preference"]{
-                if type == traveller.travellingPreference && message != " "{
-                    message += " who is a \(type)"
-                    break
-                }
-            }
-        }
-        if message == " "{
-            message = "Apologies, there are not any locals in \(traveller.destination) on LocalRetreat. Try again soon!"
-            }
-        
-        return message
-    }*/
     
     func emailLocal() -> MFMailComposeViewController{
         let name = userDefaults.stringForKey("Name")
