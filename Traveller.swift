@@ -33,6 +33,11 @@ enum TravellingPreference: String{
     case NightOwl = "Night Owl"
 }
 
+enum Gender: String{
+    case Female
+    case Male
+}
+
 class Traveller: TravellerType{
    var destination: String
    var travellingPreference: String

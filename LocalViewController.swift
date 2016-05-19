@@ -17,8 +17,6 @@ class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
     
    let localContent = NSUserDefaults.standardUserDefaults()
     
-   
-    
     let localInput = [[Destination.Austin.rawValue, Destination.Boston.rawValue, Destination.Chicago.rawValue, Destination.NewYork.rawValue, Destination.SanFrancisco.rawValue, Destination.Seattle.rawValue],[TravellingPreference.Adventurer.rawValue, TravellingPreference.ArtDesignLover.rawValue, TravellingPreference.CulturalExplorer.rawValue, TravellingPreference.Foodie.rawValue, TravellingPreference.HistoryBuff.rawValue, TravellingPreference.NightOwl.rawValue]]
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int{
@@ -33,36 +31,13 @@ class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
         return localInput[component][row]
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
-    {
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         let citySelected = localInput[0][pickerView.selectedRowInComponent(0)]
         let preferenceSelected = localInput[1][pickerView.selectedRowInComponent(1)]
         localContent.setValue(usernameTextField.text, forKey: "username")
         if let name = nameTextField.text, let gender = genderTextField.text, let username = usernameTextField.text{
-           /* var localInformation = LocalsInformation().locals
-            localInformation[name] = [
-                "City": citySelected,
-                "Preference": preferenceSelected,
-                "Gender": gender
-            ]*/
-          
             localContent.setValue(["Name": name, "City": citySelected, "Preference": preferenceSelected, "Gender": gender], forKey: username)
-            
-            for (local) in NSUserDefaults.standardUserDefaults().dictionaryRepresentation() {
-               // print(local)
-                if let information = localContent.dictionaryForKey(local.0){
-                    print(information)
-                    if information["City"]! as! String == "Austin"{
-                        let name = information["Name"]! as! String
-                        let gender = information["Gender"]! as! String
-                        let preference = information["Preference"]! as! String
-                    print(information["City"]!, name, gender, preference)
-                   // break
-                    }
-                }
-            }
         }
-    
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -73,4 +48,15 @@ class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
     }
     
     
+    @IBAction func submitButton(sender: AnyObject) {
+        
+        if nameTextField.text == "" ||  genderTextField.text == "" || usernameTextField.text == ""{
+            let alert = UIAlertController(title: "Missing Fields", message: "Please enter your name, username, and gender", preferredStyle: UIAlertControllerStyle.Alert)
+            let dismiss = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil)
+            alert.addAction(dismiss)
+            presentViewController(alert, animated: true, completion: nil)
+        }
+        
+        
+    }
 }

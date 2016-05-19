@@ -555,7 +555,7 @@
                                 </constraints>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <segue destination="eig-I0-sRI" kind="show" id="bBg-qY-zeV"/>
+                                    <action selector="submitButton:" destination="JD0-IR-svG" eventType="touchUpInside" id="xU6-Pz-igx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -612,7 +612,27 @@
                     <view key="view" contentMode="scaleToFill" id="m58-jk-TKI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for registering as a local on LocalRetreat!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtZ-Hm-lk3">
+                                <rect key="frame" x="20" y="112" width="374" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="63" id="Cec-v5-6Kf"/>
+                                    <constraint firstAttribute="width" constant="374" id="JUS-Sb-pgf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="364" id="oem-Mx-OF5"/>
+                                    <constraint firstAttribute="height" constant="63" id="qPD-2A-P72"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E8S-KE-Vfe" firstAttribute="top" secondItem="GtZ-Hm-lk3" secondAttribute="bottom" constant="561" id="8dJ-AB-v6C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GtZ-Hm-lk3" secondAttribute="trailing" id="Ac6-4B-54y"/>
+                            <constraint firstItem="GtZ-Hm-lk3" firstAttribute="leading" secondItem="m58-jk-TKI" secondAttribute="leadingMargin" id="fJV-X5-Bvb"/>
+                            <constraint firstItem="GtZ-Hm-lk3" firstAttribute="top" secondItem="GES-7i-xFd" secondAttribute="bottom" constant="48" id="sAb-YH-yz0"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
