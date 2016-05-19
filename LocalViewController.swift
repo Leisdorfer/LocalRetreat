@@ -14,8 +14,15 @@ class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
     @IBOutlet weak var cityPicker: UIPickerView!
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var preferenceLabel: UILabel!
+    @IBOutlet weak var submissionButton: UIButton!
     
-   let localContent = NSUserDefaults.standardUserDefaults()
+    let localContent = NSUserDefaults.standardUserDefaults()
     
     let localInput = [[Destination.Austin.rawValue, Destination.Boston.rawValue, Destination.Chicago.rawValue, Destination.NewYork.rawValue, Destination.SanFrancisco.rawValue, Destination.Seattle.rawValue],[TravellingPreference.Adventurer.rawValue, TravellingPreference.ArtDesignLover.rawValue, TravellingPreference.CulturalExplorer.rawValue, TravellingPreference.Foodie.rawValue, TravellingPreference.HistoryBuff.rawValue, TravellingPreference.NightOwl.rawValue]]
     
@@ -55,8 +62,19 @@ class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
             let dismiss = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil)
             alert.addAction(dismiss)
             presentViewController(alert, animated: true, completion: nil)
+        } else{
+            welcomeLabel.text = "Thank you for registering as a local on LocalRetreat!"
+            nameLabel.hidden = true
+            nameTextField.hidden = true
+            usernameTextField.hidden = true
+            usernameLabel.hidden = true
+            usernameTextField.hidden=true
+            genderLabel.hidden = true
+            genderTextField.hidden=true
+            cityLabel.hidden=true
+            preferenceLabel.hidden=true
+            cityPicker.hidden=true
+            submissionButton.hidden=true
         }
-        
-        
     }
 }
