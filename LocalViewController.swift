@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDelegate {
     
@@ -36,9 +35,9 @@ class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        print(localContent)
         let citySelected = localInput[0][pickerView.selectedRowInComponent(0)]
         let preferenceSelected = localInput[1][pickerView.selectedRowInComponent(1)]
+        localContent.setValue(usernameTextField.text, forKey: "username")
         if let name = nameTextField.text, let gender = genderTextField.text, let username = usernameTextField.text{
            /* var localInformation = LocalsInformation().locals
             localInformation[name] = [
@@ -46,61 +45,22 @@ class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
                 "Preference": preferenceSelected,
                 "Gender": gender
             ]*/
-            
-            
-          // LocalsInformation().locals[name] = localInformation[name]
+          
             localContent.setValue(["Name": name, "City": citySelected, "Preference": preferenceSelected, "Gender": gender], forKey: username)
             
             for (local) in NSUserDefaults.standardUserDefaults().dictionaryRepresentation() {
-                //print(information["City"])
-                //if String(information["City"]) == "Chicago"{
-                print(local)
-                if let information = localContent.dictionaryForKey(username){
-                    if information["City"]! as! String == "Boston"{
+               // print(local)
+                if let information = localContent.dictionaryForKey(local.0){
+                    print(information)
+                    if information["City"]! as! String == "Austin"{
                         let name = information["Name"]! as! String
                         let gender = information["Gender"]! as! String
                         let preference = information["Preference"]! as! String
                     print(information["City"]!, name, gender, preference)
-                    break
+                   // break
                     }
                 }
-               // print(local[1][0])
-              //  print(information)
-                
-                //}
             }
-            if let localName = localContent.objectForKey("Rach") as? [String: String]{
-            //print(localName["Preference"]!)
-            }
-            
-            /*let appDel = UIApplication.sharedApplication().delegate as! AppDelegate
-            let context = appDel.managedObjectContext
-            let newLocal = NSEntityDescription.insertNewObjectForEntityForName("Locals", inManagedObjectContext: context) as NSManagedObject
-            newLocal.setValue(name, forKey: "name")
-            newLocal.setValue(citySelected, forKey: "city")
-            newLocal.setValue(preferenceSelected, forKey: "preference")
-            do{
-            try context.save()
-            } catch {
-                print("Unexpected error")
-            }
-        print(localInformation)*/
-             /*var local = [NSManagedObject]()
-            
-             let appDel = UIApplication.sharedApplication().delegate as! AppDelegate
-             let context = appDel.managedObjectContext
-             let entity = NSEntityDescription.entityForName("Locals", inManagedObjectContext: context)
-             let newLocal = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: context)
-             newLocal.setValue(name, forKey: "name")
-             newLocal.setValue(citySelected, forKey: "city")
-             newLocal.setValue(preferenceSelected, forKey: "preference")
-             do{
-             try context.save()
-             local.append(newLocal)
-             } catch let error as NSError  {
-                print("Could not save \(error), \(error.userInfo)")
-             }*/
-           //  print(localInformation)
         }
     
     }

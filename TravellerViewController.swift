@@ -110,8 +110,43 @@ class TravellerViewController: UIViewController, MFMailComposeViewControllerDele
     }
     func matchTravellerWithLocal(traveller: Traveller) -> String{
         var message = " "
-        let locals = LocalsInformation().locals
-        for (local, information) in locals{
+        //let locals = LocalsInformation().locals
+        
+        for (local) in NSUserDefaults.standardUserDefaults().dictionaryRepresentation() {
+            print(local)
+            //let username = userDefaults.stringForKey("username")
+            if let information = userDefaults.dictionaryForKey(local.0){
+                print("Information: \(information)")
+                if let name = information["Name"], let city = information["City"], let gender = information["Gender"]{
+                    print(name, city, gender)
+                if city as! String == traveller.destination{
+                    message = "Meet \(name), a local of \(city) "
+                    print(message)
+                    userDefaults.setValue(name, forKey: "Name")
+                    if gender as! String == Gender.Female.rawValue{
+                        userDefaults.setValue(Gender.Female.rawValue, forKey: "Gender")
+                    } else{
+                        userDefaults.setValue(Gender.Male.rawValue, forKey: "Gender")
+                    }
+                    
+                }
+                }
+            }
+            if let information = userDefaults.dictionaryForKey(local.0), let preference = information["Preference"]{
+                if preference as! String == traveller.travellingPreference && message != " "{
+                    message += "who is a \(preference)"
+                    break
+                }
+            }
+        }
+        
+        if message == " "{
+            message = "Apologies, there are not any locals in \(traveller.destination) on LocalRetreat. Try again soon!"
+        }
+        return message
+    }
+        
+      /*  for (local, information) in locals{
             if let city = information["City"]{
                 if city == traveller.destination{
                     message = "Meet \(local), a local of \(city)"
@@ -135,7 +170,7 @@ class TravellerViewController: UIViewController, MFMailComposeViewControllerDele
             }
         
         return message
-    }
+    }*/
     
     func emailLocal() -> MFMailComposeViewController{
         let name = userDefaults.stringForKey("Name")
