@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import RealmSwift
 
 class TravellerViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
@@ -108,34 +109,27 @@ class TravellerViewController: UIViewController, MFMailComposeViewControllerDele
             
         }
     }
-    func matchTravellerWithLocal(traveller: Traveller) -> String{
+    
+    func matchTravellerWithLocal(traveller:Traveller) -> String {
+        let realm = try! Realm()
+        let locals = realm.objects(Local)
         var message = " "
-        for (local) in NSUserDefaults.standardUserDefaults().dictionaryRepresentation() {
-            print(local)
-            if let information = userDefaults.dictionaryForKey(local.0){
-                print("Information: \(information)")
-                if let name = information["Name"], let city = information["City"], let gender = information["Gender"]{
-                    print(name, city, gender)
-                if city as! String == traveller.destination{
-                    message = "Meet \(name), a local of \(city) "
-                    print(message)
-                    userDefaults.setValue(name, forKey: "Name")
-                    if gender as! String == Gender.Female.rawValue{
-                        userDefaults.setValue(Gender.Female.rawValue, forKey: "Gender")
-                    } else{
-                        userDefaults.setValue(Gender.Male.rawValue, forKey: "Gender")
-                    }
+        for local in locals{
+            if local.city == traveller.destination{
+                message = "Meet \(local.name), a local of \(local.city) "
+                userDefaults.setValue(local.name, forKey: "Name")
+                if local.preference == traveller.travellingPreference{
+                    message += "who is a \(local.preference)"
+                    break
                 }
             }
-        }
-        if let information = userDefaults.dictionaryForKey(local.0), let preference = information["Preference"]{
-            if preference as! String == traveller.travellingPreference && message != " "{
-                message += "who is a \(preference)"
-                break
-                }
+            if local.gender == Gender.Female.rawValue{
+                userDefaults.setValue(Gender.Female.rawValue, forKey: "Gender")
+            } else{
+                userDefaults.setValue(Gender.Male.rawValue, forKey: "Gender")
+            
             }
         }
-        
         if message == " "{
             message = "Apologies, there are not any locals in \(traveller.destination) on LocalRetreat. Try again soon!"
         }

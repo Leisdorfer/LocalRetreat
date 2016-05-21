@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDelegate {
     
@@ -43,9 +44,21 @@ class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
         let preferenceSelected = localInput[1][pickerView.selectedRowInComponent(1)]
         localContent.setValue(usernameTextField.text, forKey: "username")
         localContent.synchronize()
+        localContent.removeObjectForKey("")
+        //addLocal(citySelected, preference: preferenceSelected)
         if let name = nameTextField.text, let gender = genderTextField.text, let username = usernameTextField.text{
+            addLocal(citySelected, preference: preferenceSelected)
             localContent.setValue(["Name": name, "City": citySelected, "Preference": preferenceSelected, "Gender": gender], forKey: username)
         }
+    }
+    
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView{
+        let pickerLabel = UILabel()
+        pickerLabel.textColor = UIColor.blackColor()
+        pickerLabel.text = localInput[component][row]
+        pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 15)
+        pickerLabel.textAlignment = NSTextAlignment.Center
+        return pickerLabel
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -56,7 +69,6 @@ class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
     }
     
     @IBAction func submitButton(sender: AnyObject) {
-        
         if nameTextField.text == "" ||  genderTextField.text == "" || usernameTextField.text == ""{
             let alert = UIAlertController(title: "Missing Fields", message: "Please enter your name, username, and gender", preferredStyle: UIAlertControllerStyle.Alert)
             let dismiss = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil)
@@ -75,6 +87,26 @@ class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
             preferenceLabel.hidden=true
             cityPicker.hidden=true
             submissionButton.hidden=true
+        }
+    }
+    
+    func addLocal(city: String, preference: String){
+        let local = Local()
+        if let name = nameTextField.text{
+            local.name = name
+        }
+        if let username = usernameTextField.text{
+            local.username = username
+        }
+        if let gender = genderTextField.text{
+            local.gender = gender
+        }
+        local.city = city
+        local.preference = preference
+        let realm = try! Realm()
+        try! realm.write{
+            realm.add(local)
+            print("Added \(local.name)")
         }
     }
 }
