@@ -122,12 +122,13 @@ class TravellerViewController: UIViewController, MFMailComposeViewControllerDele
                     message += "who is a \(local.preference)"
                     break
                 }
-            }
-            if local.gender == Gender.Female.rawValue{
-                userDefaults.setValue(Gender.Female.rawValue, forKey: "Gender")
-            } else{
-                userDefaults.setValue(Gender.Male.rawValue, forKey: "Gender")
-            
+                if local.gender == Gender.Female.rawValue{
+                    userDefaults.setValue(Gender.Female.rawValue, forKey: "Gender")
+                    print("true")
+                } else{
+                    userDefaults.setValue(Gender.Male.rawValue, forKey: "Gender")
+                    
+                }
             }
         }
         if message == " "{

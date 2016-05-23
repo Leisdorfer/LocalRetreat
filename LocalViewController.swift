@@ -106,7 +106,6 @@ class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
         let realm = try! Realm()
         try! realm.write{
             realm.add(local)
-            print("Added \(local.name)")
         }
     }
 }
