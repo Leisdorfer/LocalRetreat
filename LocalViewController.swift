@@ -23,8 +23,6 @@ class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
     @IBOutlet weak var preferenceLabel: UILabel!
     @IBOutlet weak var submissionButton: UIButton!
     
-    let localContent = NSUserDefaults.standardUserDefaults()
-    
     let localInput = [[Destination.Austin.rawValue, Destination.Boston.rawValue, Destination.Chicago.rawValue, Destination.NewYork.rawValue, Destination.SanFrancisco.rawValue, Destination.Seattle.rawValue],[TravellingPreference.Adventurer.rawValue, TravellingPreference.ArtDesignLover.rawValue, TravellingPreference.CulturalExplorer.rawValue, TravellingPreference.Foodie.rawValue, TravellingPreference.HistoryBuff.rawValue, TravellingPreference.NightOwl.rawValue]]
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int{
@@ -42,13 +40,8 @@ class LocalViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         let citySelected = localInput[0][pickerView.selectedRowInComponent(0)]
         let preferenceSelected = localInput[1][pickerView.selectedRowInComponent(1)]
-        localContent.setValue(usernameTextField.text, forKey: "username")
-        localContent.synchronize()
-        localContent.removeObjectForKey("")
-        //addLocal(citySelected, preference: preferenceSelected)
         if let name = nameTextField.text, let gender = genderTextField.text, let username = usernameTextField.text{
             addLocal(citySelected, preference: preferenceSelected)
-            localContent.setValue(["Name": name, "City": citySelected, "Preference": preferenceSelected, "Gender": gender], forKey: username)
         }
     }
     
